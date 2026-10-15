@@ -130,3 +130,8 @@ what adds value beyond the repo (AOT stats, USA/EUR diff, pilot functions, estim
 
 ## 2026-10-15 (afternoon: R9 MakeScale, R10/R11 near-miss sweeps)
 - 9.51 % → **9.62 %** (2128 → 2141 fns). Near-miss sweeps 13/29 matched. MakeScale helper added (0 matches: zero-rematerialisation regalloc blocker). Queue groups PAUSED by user; tree at baseline, no ws left (except En_Jsjutan).
+
+## 2026-10-15 (afternoon/evening: queue groups G31–G41, 4 agents at a time)
+- 9.62 % → **10.55 %** (2141 → 2292 fns). 22 actors merged: En_Sa, Oceff_Storm, En_Ge3, Obj_Oshihiki, Oceff_Spot, En_Fire_Rock, En_Tubo_Trap, En_Insect, En_Syateki_Niw, En_Ny, En_M_Thunder, Bg_Mizu_Shutter, Arrow_Fire, En_Ds, Bg_Haka_Tubo, Arrow_Ice, Arrow_Light, En_Cow, En_Bom_Chu, En_Door (+ MakeScale helper, R10/R11 sweeps earlier). 5 cfg splits applied.
+- Infra: armcc object cache (`.armcc_cache`, mkws 87→58 s, rebuild_check 29 s all-hit); decomp repo pushed to github.com/NSCabezon/OOT3DDecompile.
+- Incidents: shared_syms.s EQUs appended after `END` (silently dropped → heap pulled in, L6224E); G40 Sonnet killed by the weekly API limit mid-edit (En_Cow ws salvaged by re-wrapping Init/Update). Recipes recorded in CLAUDE.md.

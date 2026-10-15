@@ -188,3 +188,22 @@ Bg_Hidan_Fwbig	BgHidanFwbig_WaitForSwitch:5:near,BgHidanFwbig_Init:?:todo not at
 En_Ba	FUN_003d51ec:3:near sxth r2 vs r1 (60 variants),EnBa_Init:32:far const 1/4 regs + %3 schedule,FUN_00232dac:54:far i r6 / mtx r7,EnBa_Update:145:far play2 copies folded,FUN_00198c20:230:matrix,FUN_003c6320:381:matrix,FUN_00108948:385:matrix	2026-10-15
 Obj_Ice_Poly	ObjIcePoly_Draw:16:far mov r5,#1 before sinf + row load order,ObjIcePoly_Melt:22:far 0.5f load order + VFP; lead: real statics sColorWhite/Gray at data start,ObjIcePoly_Idle:144:static guard 0x535188 obj 0x5a2ea4 + raw Player offsets	2026-10-15
 En_Mm	EnMm_Init:4:near static identity-matrix VFP numbering (1500 variants); guard hand-written on EQUs until Init is C,EnMm_Update:8:near switch cases 4/6 mov r1 hoisted	2026-10-15
+En_Ge3	EnGe3_Init:13:near	2026-10-15
+Obj_Oshihiki	ObjOshihiki_Init:25:far,ObjOshihiki_OnActor:90:far,ObjOshihiki_Draw:55:far	2026-10-15
+En_Sa	FUN_0023bca4:24:far	2026-10-15
+Oceff_Storm	OceffStorm_Draw2:130:big	2026-10-15
+En_Syateki_Niw	EnSyatekiNiw_Draw:111:far,FUN_00394300:95:far	2026-10-15
+Oceff_Spot	OceffSpot_Init:8:near	2026-10-15
+En_Fire_Rock	EnFireRock_Init:36:far	2026-10-15
+En_Insect	FUN_0021ea58:9:near,EnInsect_Update:14:far,EnInsect_Init:14:far,FUN_003be100:2:near,FUN_003ba2a0:22:far,FUN_003bd1ec:17:far,FUN_003aea04:0:notattempted,FUN_003bcadc:0:notattempted,FUN_003bfe54:0:notattempted	2026-10-15
+En_Ny	EnNy_Update:7:near,EnNy_Draw:21:near,FUN_00167204:177:big	2026-10-15
+Arrow_Fire	ArrowFire_Draw:237:big	2026-10-15
+En_Ds	EnDs_Update:7:near,EnDs_PostLimbDraw:2:static	2026-10-15
+Bg_Haka_Tubo	BgHakaTubo_Idle:4:near,EffectSsHahen_SpawnBurst_003a9460:1:near	2026-10-15
+Arrow_Ice	ArrowIce_Draw:235:big	2026-10-15
+En_M_Thunder	EnMThunder_Init:7:near,EnMThunder_Draw:160:far	2026-10-15
+Bg_Mizu_Shutter	BgMizuShutter_Move:30:far	2026-10-15
+En_Bom_Chu	EnBomChu_Init:30:far,FUN_003e4ea4:75:far,EnBomChu_Draw:41:far,EnBomChu_Update:0:notattempted	2026-10-15
+En_Door	EnDoor_Destroy:10:near,EnDoor_Draw:40:far,EnDoor_Open:40:far,EnDoor_Init:80:far,EnDoor_Idle:0:notattempted,EnDoor_SetupType:0:notattempted	2026-10-15
+Arrow_Light	ArrowLight_Draw:0:big	2026-10-15
+En_Cow	EnCow_Init:0:far,EnCow_Update:0:far,FUN_0033ddbc:6:far,FUN_00314cfc:3:near,FUN_003f0504:7:near,FUN_00349008:31:far,FUN_003f1244:52:big,FUN_0014ff48:37:static,FUN_0016d584:0:notattempted	2026-10-15
