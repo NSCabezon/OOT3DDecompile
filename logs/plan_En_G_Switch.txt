@@ -1,0 +1,4 @@
+En_G_Switch (tree ws/En_G_Switch): 14 asm functions, 1528 insns (3 actor dir, 11 action FUN_s outside)
+haiku1 (362 insns): FUN_00238cb4[6], EnGSwitch_Destroy[11], FUN_0037e450[23], FUN_002593d0[26], FUN_001745ac[39], FUN_003df554[64], FUN_002692ac[84], FUN_00198288[109]
+sonnet-direct (1166 insns): EnGSwitch_Update[137], FUN_002073c0[139], EnGSwitch_Init[186], FUN_0033ba54[188], FUN_001e9c1c[194], FUN_001e5048[322]
+outside actor dir: FUN_00238cb4@functions_200000s.cpp, FUN_0037e450@functions_370000s.cpp, FUN_002593d0@functions_240000s.cpp, FUN_001745ac@functions_140000s.cpp, FUN_003df554@functions_3C0000s.cpp, FUN_002692ac@functions_240000s.cpp, FUN_00198288@functions_180000s.cpp, FUN_002073c0@functions_200000s.cpp, FUN_0033ba54@functions_320000s.cpp, FUN_001e9c1c@functions_1C0000s.cpp, FUN_001e5048@functions_1C0000s.cpp

@@ -1,0 +1,4 @@
+Bg_Ydan_Hasi (tree ws/Bg_Ydan_Hasi): 10 asm functions, 347 insns (10 actor dir, 0 action FUN_s outside)
+haiku1 (177 insns): BgYdanHasi_Update[9], BgYdanHasi_Destroy[12], BgYdanHasi_InitWater[13], BgYdanHasi_DecWaterTimer[15], BgYdanHasi_SetupThreeBlocks[23], BgYdanHasi_Draw[25], BgYdanHasi_MoveWater[39], BgYdanHasi_UpdateThreeBlocks[41]
+haiku2 (170 insns): BgYdanHasi_UpdateFloatingBlock[58], BgYdanHasi_Init[112]
+sonnet-direct (0 insns): 

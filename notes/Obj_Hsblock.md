@@ -1,0 +1,1 @@
+- ObjHsblock_Draw: matched (Opus closing pass). 6/6, ws_check baseline only.

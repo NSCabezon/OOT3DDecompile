@@ -1,0 +1,8 @@
+En_Hata
+En_Ik
+En_Fd_Fire
+En_G_Switch
+En_A_Obj
+Oceff_Wipe3
+En_Blkobj
+Bg_Ydan_Hasi

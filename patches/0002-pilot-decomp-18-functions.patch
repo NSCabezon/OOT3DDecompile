@@ -1,0 +1,420 @@
+diff --git a/include/functions.hpp b/include/functions.hpp
+index cc66ac2..2f608e1 100644
+--- a/include/functions.hpp
++++ b/include/functions.hpp
+@@ -169,3 +169,10 @@ void FUN_00312fc4(void* address, size_t size);
+ void FUN_00311c70(u32 arg0);
+ 
+ float sqrtf(float arg);
++
++// Added by decomp-spike pilot (2026-10-12)
++void Actor_ChangeType(PlayState* play, ActorContext* actorCtx, Actor* actor, u8 actorCategory); // N64: Actor_ChangeCategory
++void FUN_0036f4f0(PlayState* play); // N64: Play_TriggerRespawn
++void Gameplay_TriggerVoidOut(PlayState* play);
++void Audio_SetBGM(u32 arg0, u32 arg1); // N64: SEQCMD_STOP_SEQUENCE wrapper
++s32 FUN_0033caf8(Player* player); // N64: func_8002DEEC (player busy / in cutscene check)
+diff --git a/include/macros.hpp b/include/macros.hpp
+index 30375ae..b5bc749 100644
+--- a/include/macros.hpp
++++ b/include/macros.hpp
+@@ -47,4 +47,10 @@
+ 
+ #define ADJUST_FRAMECOUNT(x) ((s32)((f32)(3 * x) / SREG(30) + 0.5f))
+ 
++
++#ifndef CLAMP_MAX
++#define CLAMP(x, min, max) ((x) < (min) ? (min) : (x) > (max) ? (max) : (x))
++#define CLAMP_MAX(x, max) ((x) > (max) ? (max) : (x))
++#define CLAMP_MIN(x, min) ((x) < (min) ? (min) : (x))
++#endif
+ #endif
+diff --git a/src/functions/functions_100000s.cpp b/src/functions/functions_100000s.cpp
+index 11f3405..8a10573 100644
+--- a/src/functions/functions_100000s.cpp
++++ b/src/functions/functions_100000s.cpp
+@@ -130,7 +130,6 @@ GLOBAL_ASM("asm/FUN_00107ae4.s")
+ GLOBAL_ASM("asm/FUN_00107f3c.s")
+ 
+ 
+-GLOBAL_ASM("asm/FUN_0010862c.s")
+ 
+ 
+ GLOBAL_ASM("asm/FUN_00108774.s")
+diff --git a/src/functions/functions_180000s.cpp b/src/functions/functions_180000s.cpp
+index c67d849..ad59cb3 100644
+--- a/src/functions/functions_180000s.cpp
++++ b/src/functions/functions_180000s.cpp
+@@ -41,7 +41,6 @@ GLOBAL_ASM("asm/FUN_00180e80.s")
+ 
+ GLOBAL_ASM("asm/FUN_00180fd4.s")
+ 
+-GLOBAL_ASM("asm/FUN_001810b4.s")
+ 
+ GLOBAL_ASM("asm/FUN_001810fc.s")
+ 
+diff --git a/src/functions/functions_240000s.cpp b/src/functions/functions_240000s.cpp
+index ea1933b..9272169 100644
+--- a/src/functions/functions_240000s.cpp
++++ b/src/functions/functions_240000s.cpp
+@@ -104,7 +104,6 @@ GLOBAL_ASM("asm/FUN_00249044.s")
+ GLOBAL_ASM("asm/FUN_00249048.s")
+ 
+ 
+-GLOBAL_ASM("asm/FUN_00249af8.s")
+ 
+ GLOBAL_ASM("asm/FUN_0024ba60.s")
+ 
+diff --git a/src/functions/functions_3A0000s.cpp b/src/functions/functions_3A0000s.cpp
+index 2fc8044..867b12b 100644
+--- a/src/functions/functions_3A0000s.cpp
++++ b/src/functions/functions_3A0000s.cpp
+@@ -469,7 +469,6 @@ GLOBAL_ASM("asm/FUN_003bf458.s")
+ 
+ GLOBAL_ASM("asm/FUN_003bf500.s")
+ 
+-GLOBAL_ASM("asm/FUN_003bf620.s")
+ 
+ GLOBAL_ASM("asm/FUN_003bf708.s")
+ 
+diff --git a/src/functions/functions_3E0000s.cpp b/src/functions/functions_3E0000s.cpp
+index 83ccf79..b538d8c 100644
+--- a/src/functions/functions_3E0000s.cpp
++++ b/src/functions/functions_3E0000s.cpp
+@@ -179,7 +179,6 @@ GLOBAL_ASM("asm/FUN_003e7a78.s")
+ 
+ GLOBAL_ASM("asm/FUN_003e7af4.s")
+ 
+-GLOBAL_ASM("asm/FUN_003e7c50.s")
+ 
+ 
+ GLOBAL_ASM("asm/FUN_003e7da0.s")
+diff --git a/src/game/actors/En_Eg/z_en_eg.cpp b/src/game/actors/En_Eg/z_en_eg.cpp
+index defde9e..73f79e0 100644
+--- a/src/game/actors/En_Eg/z_en_eg.cpp
++++ b/src/game/actors/En_Eg/z_en_eg.cpp
+@@ -8,7 +8,7 @@ void EnEg_Destroy(Actor* actor, GameState* state);
+ void EnEg_Update(Actor* actor, GameState* state);
+ void EnEg_Draw(Actor* actor, GameState* state);
+ 
+-GLOBAL_ASM("data/z_En_Eg.data.s")
++void FUN_00249af8(EnEg* self, PlayState* play); // N64: func_809FFDC8
+ 
+ ActorInit En_Eg_InitVars = {
+     ACTOR_EN_EG,
+@@ -22,11 +22,46 @@ ActorInit En_Eg_InitVars = {
+     (ActorFunc)EnEg_Draw,
+ };
+ 
+-GLOBAL_ASM("asm/EnEg_Init.s")
++// 0x00522DE4 (previously GLOBAL_ASM("data/z_En_Eg.data.s"), placed right after InitVars)
++static EnEgActionFunc sActionFuncs[] = {
++    FUN_00249af8,
++};
++
++// On 3DS the N64 file-static "sVoided" lives in PlayState (+0x7FA0), past the currently mapped struct.
++#define EN_EG_VOIDED(play) (*(s32*)((u8*)(play) + 0x7FA0))
++
++void EnEg_Destroy(Actor* actor, GameState* state) {
++}
+ 
+-GLOBAL_ASM("asm/EnEg_Destroy.s")
++void EnEg_Init(Actor* actor, GameState* state) {
++    EnEg* self = (EnEg*)actor;
+ 
+-GLOBAL_ASM("asm/EnEg_Update.s")
++    self->action = 0;
++}
+ 
+-GLOBAL_ASM("asm/EnEg_Draw.s")
++void FUN_00249af8(EnEg* self, PlayState* play) {
++    if (!EN_EG_VOIDED(play) && (gSaveContext.timer2Value <= 0) && Flags_GetSwitch(play, 0x36)) {
++        FUN_0036f4f0(play); // Play_TriggerRespawn
++        gSaveContext.respawnFlag = -2;
++        Audio_SetBGM(0, 0);
++        play->fadeOutTransition = 2;
++        Audio_PlaySoundGeneral(0x10004E1, NULL, 4, &FLOAT_0054ac20, &FLOAT_0054ac20, &DAT_0054ac24.unk_0); // NA_SE_OC_ABYSS
++        EN_EG_VOIDED(play) = true;
++    }
++}
++
++void EnEg_Update(Actor* actor, GameState* state) {
++    EnEg* self = (EnEg*)actor;
++    PlayState* play = (PlayState*)state;
++    s32 action = self->action;
++
++    if ((action < 0) || (0 < action) || (sActionFuncs[action] == NULL)) {
++        // "The main mode is wrong!!!" (debug print stripped)
++    } else {
++        sActionFuncs[action](self, play);
++    }
++}
++
++void EnEg_Draw(Actor* actor, GameState* state) {
++}
+ }
+diff --git a/src/game/actors/En_Eg/z_en_eg.hpp b/src/game/actors/En_Eg/z_en_eg.hpp
+index 9121698..c496397 100644
+--- a/src/game/actors/En_Eg/z_en_eg.hpp
++++ b/src/game/actors/En_Eg/z_en_eg.hpp
+@@ -5,9 +5,11 @@
+ 
+ struct EnEg;
+ 
++typedef void (*EnEgActionFunc)(struct EnEg*, PlayState*);
++
+ typedef struct EnEg {
+     /* 0x0000 */ Actor actor;
+-    /* 0x01A4 */ char unk_1A4[0x4];
++    /* 0x01A4 */ s32 action;
+ } EnEg; // size = 0x1A8
+ 
+ extern ActorInit En_Eg_InitVars;
+diff --git a/src/game/actors/En_Wall_Tubo/z_en_wall_tubo.cpp b/src/game/actors/En_Wall_Tubo/z_en_wall_tubo.cpp
+index 79e22cb..5d1905c 100644
+--- a/src/game/actors/En_Wall_Tubo/z_en_wall_tubo.cpp
++++ b/src/game/actors/En_Wall_Tubo/z_en_wall_tubo.cpp
+@@ -7,6 +7,9 @@ void EnWallTubo_Init(Actor* actor, GameState* state);
+ void EnWallTubo_Destroy(Actor* actor, GameState* state);
+ void EnWallTubo_Update(Actor* actor, GameState* state);
+ 
++void FUN_001810b4(EnWallTubo* self, PlayState* play); // N64: EnWallTubo_FindGirl
++void FUN_003e7098(EnWallTubo* self, PlayState* play); // N64: EnWallTubo_DetectChu
++
+ ActorInit En_Wall_Tubo_InitVars = {
+     ACTOR_EN_WALL_TUBO,
+     ACTORCAT_PROP,
+@@ -19,9 +22,39 @@ ActorInit En_Wall_Tubo_InitVars = {
+     NULL,
+ };
+ 
+-GLOBAL_ASM("asm/EnWallTubo_Init.s")
++void EnWallTubo_Init(Actor* actor, GameState* state) {
++    EnWallTubo* self = (EnWallTubo*)actor;
++
++    self->homePos = self->actor.world.pos;
++    self->actionFunc = FUN_001810b4;
++}
++
++void EnWallTubo_Destroy(Actor* actor, GameState* state) {
++}
++
++void FUN_001810b4(EnWallTubo* self, PlayState* play) {
++    Actor* actor = play->actorCtx.actorLists[ACTORCAT_NPC].head;
+ 
+-GLOBAL_ASM("asm/EnWallTubo_Destroy.s")
++    while (actor != NULL) {
++        if (actor->id != ACTOR_EN_BOM_BOWL_MAN) {
++            actor = actor->next;
++            continue;
++        }
++        self->bowlingGirl = actor;
++        break;
++    }
+ 
+-GLOBAL_ASM("asm/EnWallTubo_Update.s")
++    self->actionFunc = FUN_003e7098;
++}
++
++void EnWallTubo_Update(Actor* actor, GameState* state) {
++    EnWallTubo* self = (EnWallTubo*)actor;
++    PlayState* play = (PlayState*)state;
++
++    if (self->timer != 0) {
++        self->timer--;
++    }
++
++    self->actionFunc(self, play);
++}
+ }
+diff --git a/src/game/actors/En_Wall_Tubo/z_en_wall_tubo.hpp b/src/game/actors/En_Wall_Tubo/z_en_wall_tubo.hpp
+index 693a450..805e34f 100644
+--- a/src/game/actors/En_Wall_Tubo/z_en_wall_tubo.hpp
++++ b/src/game/actors/En_Wall_Tubo/z_en_wall_tubo.hpp
+@@ -5,9 +5,15 @@
+ 
+ struct EnWallTubo;
+ 
++typedef void (*EnWallTuboActionFunc)(struct EnWallTubo*, PlayState*);
++
+ typedef struct EnWallTubo {
+     /* 0x0000 */ Actor actor;
+-    /* 0x01A4 */ char unk_1A4[0x24];
++    /* 0x01A4 */ EnWallTuboActionFunc actionFunc;
++    /* 0x01A8 */ s16 timer;
++    /* 0x01AA */ char unk_1AA[0x0E];
++    /* 0x01B8 */ Actor* bowlingGirl; // EnBomBowlMan*
++    /* 0x01BC */ Vec3f homePos;
+ } EnWallTubo; // size = 0x1C8
+ 
+ extern ActorInit En_Wall_Tubo_InitVars;
+diff --git a/src/game/actors/Obj_Makekinsuta/z_obj_makekinsuta.cpp b/src/game/actors/Obj_Makekinsuta/z_obj_makekinsuta.cpp
+index 41544db..fb46592 100644
+--- a/src/game/actors/Obj_Makekinsuta/z_obj_makekinsuta.cpp
++++ b/src/game/actors/Obj_Makekinsuta/z_obj_makekinsuta.cpp
+@@ -7,6 +7,9 @@ void ObjMakekinsuta_Init(Actor* actor, GameState* state);
+ void ObjMakekinsuta_Destroy(Actor* actor, GameState* state);
+ void ObjMakekinsuta_Update(Actor* actor, GameState* state);
+ 
++void FUN_003bf620(ObjMakekinsuta* self, PlayState* play); // N64: func_80B98320
++void ObjMakekinsuta_DoNothing(ObjMakekinsuta* self, PlayState* play);
++
+ ActorInit Obj_Makekinsuta_InitVars = {
+     ACTOR_OBJ_MAKEKINSUTA,
+     ACTORCAT_ITEMACTION,
+@@ -19,10 +22,34 @@ ActorInit Obj_Makekinsuta_InitVars = {
+     NULL,
+ };
+ 
+-GLOBAL_ASM("asm/ObjMakekinsuta_Init.s")
++void ObjMakekinsuta_Init(Actor* actor, GameState* state) {
++    ObjMakekinsuta* self = (ObjMakekinsuta*)actor;
+ 
+-GLOBAL_ASM("asm/ObjMakekinsuta_Update.s")
++    // N64 printed a param-validity message here; 3DS keeps only the assignment
++    self->actionFunc = FUN_003bf620;
++}
+ 
+-GLOBAL_ASM("asm/ObjMakekinsuta_DoNothing.s")
++void FUN_003bf620(ObjMakekinsuta* self, PlayState* play) {
++    if (self->unk_1AA != 0) {
++        if ((self->timer > ADJUST_FRAMECOUNT(59)) && !FUN_0033caf8(GET_PLAYER(play))) {
++            Actor_Spawn(&play->actorCtx, play, ACTOR_EN_SW, self->actor.world.pos.x, self->actor.world.pos.y,
++                        self->actor.world.pos.z, 0, self->actor.shape.rot.y, 0, self->actor.params | 0x8000, 1);
++            self->actionFunc = ObjMakekinsuta_DoNothing;
++        } else {
++            self->timer++;
++        }
++    } else {
++        self->timer = 0;
++    }
++}
+ 
++void ObjMakekinsuta_DoNothing(ObjMakekinsuta* self, PlayState* play) {
++}
++
++void ObjMakekinsuta_Update(Actor* actor, GameState* state) {
++    ObjMakekinsuta* self = (ObjMakekinsuta*)actor;
++    PlayState* play = (PlayState*)state;
++
++    self->actionFunc(self, play);
++}
+ }
+diff --git a/src/game/actors/Obj_Makekinsuta/z_obj_makekinsuta.hpp b/src/game/actors/Obj_Makekinsuta/z_obj_makekinsuta.hpp
+index c66ccff..1e91609 100644
+--- a/src/game/actors/Obj_Makekinsuta/z_obj_makekinsuta.hpp
++++ b/src/game/actors/Obj_Makekinsuta/z_obj_makekinsuta.hpp
+@@ -5,9 +5,13 @@
+ 
+ struct ObjMakekinsuta;
+ 
++typedef void (*ObjMakekinsutaActionFunc)(struct ObjMakekinsuta*, PlayState*);
++
+ typedef struct ObjMakekinsuta {
+     /* 0x0000 */ Actor actor;
+-    /* 0x01A4 */ char unk_1A4[0x8];
++    /* 0x01A4 */ ObjMakekinsutaActionFunc actionFunc;
++    /* 0x01A8 */ s16 timer;
++    /* 0x01AA */ u16 unk_1AA; // N64: unk_152, set by the soil patch when bugs are released
+ } ObjMakekinsuta; // size = 0x1AC
+ 
+ extern ActorInit Obj_Makekinsuta_InitVars;
+diff --git a/src/game/actors/Obj_Roomtimer/z_obj_roomtimer.cpp b/src/game/actors/Obj_Roomtimer/z_obj_roomtimer.cpp
+index be74f0e..c62ace4 100644
+--- a/src/game/actors/Obj_Roomtimer/z_obj_roomtimer.cpp
++++ b/src/game/actors/Obj_Roomtimer/z_obj_roomtimer.cpp
+@@ -7,6 +7,9 @@ void ObjRoomtimer_Init(Actor* actor, GameState* state);
+ void ObjRoomtimer_Destroy(Actor* actor, GameState* state);
+ void ObjRoomtimer_Update(Actor* actor, GameState* state);
+ 
++void FUN_003e7c50(ObjRoomtimer* self, PlayState* play); // N64: func_80B9D054 (start timer)
++void FUN_0010862c(ObjRoomtimer* self, PlayState* play); // N64: func_80B9D0B0 (wait for room clear)
++
+ ActorInit Obj_Roomtimer_InitVars = {
+     ACTOR_OBJ_ROOMTIMER,
+     ACTORCAT_ENEMY,
+@@ -19,9 +22,64 @@ ActorInit Obj_Roomtimer_InitVars = {
+     NULL,
+ };
+ 
+-GLOBAL_ASM("asm/ObjRoomtimer_Init.s")
++void ObjRoomtimer_Init(Actor* actor, GameState* state) {
++    ObjRoomtimer* self = (ObjRoomtimer*)actor;
++
++    self->switchFlag = (self->actor.params >> 10) & 0x3F;
++    self->actor.params = self->actor.params & 0x3FF;
++
++    if (self->actor.params != 0x3FF) {
++        self->actor.params = CLAMP_MAX(self->actor.params, 600);
++    }
++
++    self->actionFunc = FUN_003e7c50;
++}
++
++void ObjRoomtimer_Destroy(Actor* actor, GameState* state) {
++    ObjRoomtimer* self = (ObjRoomtimer*)actor;
++
++    if ((self->actor.params != 0x3FF) && (gSaveContext.timer1Value > 0)) {
++        gSaveContext.timer1State = 10; // TIMER_STATE_STOP
++    }
++}
+ 
+-GLOBAL_ASM("asm/ObjRoomtimer_Destroy.s")
++void FUN_003e7c50(ObjRoomtimer* self, PlayState* play) {
++    if (self->actor.params != 0x3FF) {
++        FUN_0035239c(self->actor.params); // N64: Interface_SetTimer
++    }
+ 
+-GLOBAL_ASM("asm/ObjRoomtimer_Update.s")
++    Actor_ChangeType(play, &play->actorCtx, &self->actor, ACTORCAT_PROP);
++    self->actionFunc = FUN_0010862c;
++}
++
++void FUN_0010862c(ObjRoomtimer* self, PlayState* play) {
++    if (Flags_GetTempClear(play, self->actor.room)) {
++        if (self->actor.params != 0x3FF) {
++            gSaveContext.timer1State = 10; // TIMER_STATE_STOP
++        }
++        Flags_SetClear(play, self->actor.room);
++        Flags_SetSwitch(play, self->switchFlag);
++        // 3DS addition: no chime in Master Quest scene 0x0B room 1
++        if (gSaveContext.masterQuestFlag && (play->sceneNum == 0xB) && (self->actor.room == 1)) {
++            Actor_Kill(&self->actor);
++            return;
++        }
++        FUN_00372244(&play->unk_5FCC, 0x1E, 0x1000487); // NA_SE_SY_CORRECT_CHIME
++        Actor_Kill(&self->actor);
++        return;
++    }
++
++    if ((self->actor.params != 0x3FF) && (gSaveContext.timer1Value == 0)) {
++        Audio_PlaySoundGeneral(0x10004E1, NULL, 4, &FLOAT_0054ac20, &FLOAT_0054ac20, &DAT_0054ac24.unk_0); // NA_SE_OC_ABYSS
++        Gameplay_TriggerVoidOut(play);
++        Actor_Kill(&self->actor);
++    }
++}
++
++void ObjRoomtimer_Update(Actor* actor, GameState* state) {
++    ObjRoomtimer* self = (ObjRoomtimer*)actor;
++    PlayState* play = (PlayState*)state;
++
++    self->actionFunc(self, play);
++}
+ }
+diff --git a/src/game/actors/Obj_Roomtimer/z_obj_roomtimer.hpp b/src/game/actors/Obj_Roomtimer/z_obj_roomtimer.hpp
+index 8a38cb1..733605d 100644
+--- a/src/game/actors/Obj_Roomtimer/z_obj_roomtimer.hpp
++++ b/src/game/actors/Obj_Roomtimer/z_obj_roomtimer.hpp
+@@ -5,9 +5,12 @@
+ 
+ struct ObjRoomtimer;
+ 
++typedef void (*ObjRoomtimerActionFunc)(struct ObjRoomtimer*, PlayState*);
++
+ typedef struct ObjRoomtimer {
+     /* 0x0000 */ Actor actor;
+-    /* 0x01A4 */ char unk_1A4[0x8];
++    /* 0x01A4 */ ObjRoomtimerActionFunc actionFunc;
++    /* 0x01A8 */ u32 switchFlag;
+ } ObjRoomtimer; // size = 0x1AC
+ 
+ extern ActorInit Obj_Roomtimer_InitVars;

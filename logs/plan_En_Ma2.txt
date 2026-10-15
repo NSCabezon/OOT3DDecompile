@@ -1,0 +1,4 @@
+En_Ma2 (tree ws/En_Ma2): 9 asm functions, 485 insns (4 actor dir, 5 action FUN_s outside)
+haiku1 (287 insns): EnMa2_Destroy[11], FUN_00233648[13], FUN_002172bc[16], FUN_00195dac[27], FUN_001c53ec[27], FUN_001c5338[40], EnMa2_Draw[49], EnMa2_Update[104]
+sonnet-direct (198 insns): EnMa2_Init[198]
+outside actor dir: FUN_00233648@functions_200000s.cpp, FUN_002172bc@functions_200000s.cpp, FUN_00195dac@functions_180000s.cpp, FUN_001c53ec@functions_1C0000s.cpp, FUN_001c5338@functions_1C0000s.cpp

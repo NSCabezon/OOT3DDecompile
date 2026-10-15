@@ -1,0 +1,4 @@
+Bg_Ice_Shelter (tree ws/Bg_Ice_Shelter): 8 asm functions, 692 insns (4 actor dir, 4 action FUN_s outside)
+haiku1 (458 insns): BgIceShelter_Update[2], BgIceShelter_Destroy[31], FUN_003bf214[58], FUN_003f5f00[73], BgIceShelter_Draw[88], FUN_001a2fa0[98], FUN_001cf550[108]
+sonnet-direct (234 insns): BgIceShelter_Init[234]
+outside actor dir: FUN_003bf214@functions_3A0000s.cpp, FUN_003f5f00@functions_3E0000s.cpp, FUN_001a2fa0@functions_180000s.cpp, FUN_001cf550@functions_1C0000s.cpp

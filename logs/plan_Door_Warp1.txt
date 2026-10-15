@@ -1,0 +1,4 @@
+Door_Warp1 (tree ws/Door_Warp1): 5 asm functions, 740 insns (4 actor dir, 1 action FUN_s outside)
+haiku1 (167 insns): DoorWarp1_Update[31], DoorWarp1_Destroy[34], DoorWarp1_Draw[102]
+sonnet-direct (573 insns): DoorWarp1_Init[185], FUN_0015b904[388]
+outside actor dir: FUN_0015b904@functions_140000s.cpp

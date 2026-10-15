@@ -1,0 +1,8 @@
+Bg_Hidan_Curtain
+En_Horse_Link_Child
+En_Ms
+Bg_Menkuri_Eye
+En_Ma1
+Bg_Vb_Sima
+En_Nb
+En_Heishi2

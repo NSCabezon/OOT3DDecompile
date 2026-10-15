@@ -1,0 +1,4 @@
+En_Horse_Link_Child (tree ws/En_Horse_Link_Child): 13 asm functions, 1343 insns (4 actor dir, 9 action FUN_s outside)
+haiku1 (256 insns): FUN_002874b0[14], EnHorseLinkChild_Destroy[16], EnHorseLinkChild_Draw[16], FUN_0037e568[28], FUN_00348854[31], FUN_001e1dfc[63], FUN_0039099c[88]
+sonnet-direct (1087 insns): FUN_00390760[133], EnHorseLinkChild_Init[144], EnHorseLinkChild_Update[146], FUN_0039c5e0[172], FUN_003a0ffc[185], FUN_00292b50[307]
+outside actor dir: FUN_002874b0@functions_280000s.cpp, FUN_0037e568@functions_370000s.cpp, FUN_00348854@functions_340000s.cpp, FUN_001e1dfc@functions_1C0000s.cpp, FUN_0039099c@functions_380000s.cpp, FUN_00390760@functions_380000s.cpp, FUN_0039c5e0@functions_380000s.cpp, FUN_003a0ffc@functions_3A0000s.cpp, FUN_00292b50@functions_280000s.cpp

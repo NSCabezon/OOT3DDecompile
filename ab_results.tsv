@@ -1,0 +1,9 @@
+actor	model	matched	total	checks	tokens	duration_s	hacks
+Bg_Menkuri_Nisekabe	sonnet	4	4	3	61082	470	none
+Bg_Menkuri_Nisekabe	haiku	4	4	5	94574	479	none
+Bg_Spot01_Fusya	sonnet	5	5	9	82658	675	none
+En_Bird	sonnet	7	7	8	92186	731	InitChain raw addr
+Demo_Ec	haiku	4	5	11	131042	819	tables raw addr
+Demo_Ec	sonnet	6	6	15	86696	899	tables raw addr
+En_Bird	haiku	6	7	12	140452	940	none
+Bg_Spot01_Fusya	haiku	5	5	4	128646	1673	none

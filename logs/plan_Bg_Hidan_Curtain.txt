@@ -1,0 +1,5 @@
+Bg_Hidan_Curtain (tree ws/Bg_Hidan_Curtain): 10 asm functions, 443 insns (4 actor dir, 6 action FUN_s outside)
+haiku1 (170 insns): FUN_003d5fd4[8], FUN_0010b9d0[9], FUN_0010bdc8[9], BgHidanCurtain_Destroy[10], FUN_003ba250[18], FUN_003d9f6c[37], FUN_003e8738[38], BgHidanCurtain_Draw[41]
+haiku2 (104 insns): BgHidanCurtain_Update[104]
+sonnet-direct (169 insns): BgHidanCurtain_Init[169]
+outside actor dir: FUN_003d5fd4@functions_3C0000s.cpp, FUN_0010b9d0@functions_100000s.cpp, FUN_0010bdc8@functions_100000s.cpp, FUN_003ba250@functions_3A0000s.cpp, FUN_003d9f6c@functions_3C0000s.cpp, FUN_003e8738@functions_3E0000s.cpp

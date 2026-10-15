@@ -1,0 +1,3 @@
+Bg_Menkuri_Eye (tree ws/Bg_Menkuri_Eye): 4 asm functions, 345 insns (4 actor dir, 0 action FUN_s outside)
+haiku1 (131 insns): BgMenkuriEye_Destroy[10], BgMenkuriEye_Init[42], BgMenkuriEye_Update[79]
+sonnet-direct (214 insns): BgMenkuriEye_Draw[214]

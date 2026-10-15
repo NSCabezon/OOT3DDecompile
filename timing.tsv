@@ -1,0 +1,77 @@
+actor	stage	batch	start	end	n_assigned	n_matched	tokens	duration_ms	cost_usd
+Bg_Mizu_Water	haiku	all	2026-10-13 11:2x		5	1	227682	495464
+En_Xc	haiku	all	2026-10-13 11:2x		~85	9	250651	672069
+En_Horse	haiku	all	2026-10-13 11:23:03	2026-10-13 11:36:27	54	7	310099	791129
+Bg_Mizu_Water	sonnet	all		2026-10-13 11:44:23	5	4	225268	769753
+Bg_Mizu_Water	opus	all		2026-10-13 11:53:04	1	0	147315	510803
+En_Xc	sonnet	all		2026-10-13 12:32:38	~76	35	756372	3474037
+En_Horse	sonnet	all	2026-10-13 11:36:27	2026-10-13 12:42:24	47	26	820338	3938957
+En_Xc	opus	all		2026-10-13 12:43:30	14	3	187414	634268
+En_Horse	opus	all		2026-10-13 12:53:49	16	1	182658	669548
+En_GeldB	haiku	haiku1	2026-10-13 12:58:08	2026-10-13 13:08:13	8	5	226495	587907
+En_GeldB	haiku	haiku2		2026-10-13 13:21:00	7	4	295379	751877
+En_GeldB	haiku	haiku3		2026-10-13 13:32:05	5	3	282556	645743
+En_GeldB	sonnet	all	2026-10-13 13:32:05	2026-10-13 14:28:55	21	10	609479	3409890
+En_GeldB	opus	all	2026-10-13 14:29:30	2026-10-13 14:35:51	7	1	138359	383597
+Bg_Spot08_Iceblock	haiku	haiku1	2026-10-13 16:25:20	2026-10-13 16:28:27	3	3	100640	175493
+Bg_Hidan_Hamstep	haiku	haiku1	2026-10-13 16:25:20	2026-10-13 16:30:10	5	4	142018	275109
+En_Siofuki	haiku	haiku1	2026-10-13 16:25:20	2026-10-13 16:30:21	3	2	150874	278606
+Bg_Jya_Haheniron	haiku	haiku1	2026-10-13 16:25:20	2026-10-13 16:30:42	8	6	170830	337403
+Bg_Bdan_Objects	haiku	haiku1	2026-10-13 16:25:20	2026-10-13 16:32:20	8	7	183701	424765
+En_Attack_Niw	haiku	haiku1	2026-10-13 16:25:20	2026-10-13 16:33:33	5	4	212180	485301
+Bg_Spot08_Iceblock	sonnet	all	2026-10-13 16:28:27	2026-10-13 16:34:27	1	0	140166	350415
+Elf_Msg	haiku	haiku1	2026-10-13 16:25:20	2026-10-13 16:35:03	6	3	229263	591033
+Bg_Spot08_Iceblock	opus	all	2026-10-13 16:34:30	2026-10-13 16:36:23	1	1	70691	104836
+End_Title	haiku	haiku1	2026-10-13 16:25:20	2026-10-13 16:37:07	6	4	252446	719880
+En_Siofuki	sonnet	all	2026-10-13 16:30:30	2026-10-13 16:39:40	2	1	158015	547569
+Bg_Hidan_Hamstep	sonnet	all	2026-10-13 16:30:15	2026-10-13 16:39:54	4	1	189142	567808
+Elf_Msg	sonnet	all	2026-10-13 16:35:10	2026-10-13 16:40:13	1	0	115341	293933
+Bg_Bdan_Objects	haiku	haiku2	2026-10-13 16:32:25	2026-10-13 16:41:54	5	2	237475	562957
+Elf_Msg	opus	all	2026-10-13 16:40:15	2026-10-13 16:42:06	1	1	67649	98125
+En_Attack_Niw	sonnet	all	2026-10-13 16:33:40	2026-10-13 16:42:35	5	1	211735	531824
+End_Title	sonnet	all	2026-10-13 16:37:10	2026-10-13 16:45:58	4	0	195042	520179
+En_Siofuki	opus	all	2026-10-13 16:39:45	2026-10-13 16:48:48	1	0	137506	531480
+Bg_Hidan_Hamstep	opus	all	2026-10-13 16:40:00	2026-10-13 16:49:24	2	1	111530	558821
+Bg_Bdan_Objects	sonnet	all	2026-10-13 16:42:00	2026-10-13 16:50:43	5	2	173216	517241
+End_Title	opus	all	2026-10-13 16:46:00	2026-10-13 16:53:54	2	0	122994	463928
+En_Attack_Niw	opus	all	2026-10-13 16:42:40	2026-10-13 16:54:24	3	1	133470	670295
+Bg_Bdan_Objects	opus	all	2026-10-13 16:50:45	2026-10-13 16:57:31	2	1	122076	393161
+En_Ma3	solo-haiku	all	2026-10-13 17:59:16	2026-10-13 18:06:09	8	2	-	-
+En_Anubice_Fire	solo-haiku	all	2026-10-13 18:25:11	2026-10-13 18:34:00	3	2	-	-
+Item_Etcetera	solo-haiku	all	2026-10-13 18:34:03	2026-10-13 18:38:25	4	3	-	-
+Bg_Toki_Hikari	solo-opus	all	2026-10-13 19:05:18	2026-10-13 19:11:29	7	7	-	-
+En_fHG	solo-opus	all	2026-10-13 19:11:29	2026-10-13 19:22:06	5	2	-	-
+En_Dnt_Nomal	solo-opus	all	2026-10-13 19:25:17	2026-10-13 19:38:46	23	20	-	-
+En_Js	solo-opus	all	2026-10-13 19:38:52	2026-10-13 19:45:15	11	10	-	-
+Bg_Spot11_Bakudankabe	solo-opus	all	2026-10-13 19:45:19	2026-10-13 19:49:00	3	3	-	-
+En_Niw_Lady	solo-opus	all	2026-10-13 19:49:06	2026-10-13 19:55:48	14	12	-	-
+En_Ma3	sonnet-grandes	FUN_00195EB8	2026-10-13 20:07:28	2026-10-13 20:16:08	1	1	87663	-
+En_Anubice_Fire	sonnet-grandes	FUN_003e04b8	2026-10-13 20:07:28	2026-10-13 20:16:08	1	0	114312	-
+Item_Etcetera	sonnet-grandes	ItemEtcetera_MoveFireArrowDown	2026-10-13 20:07:28	2026-10-13 20:16:08	1	0	101241	-
+Bg_Toki_Hikari	sonnet-grandes	BgTokiHikari_Draw	2026-10-13 20:07:28	2026-10-13 20:16:08	1	0	108407	-
+En_Anubice_Fire	cascade-sonnet+opus	EnAnubiceFire_Update,FUN_003e04b8	2026-10-13 20:18:56	2026-10-13 20:38:54	2	1	211223	-
+Item_Etcetera	cascade-sonnet+opus	ItemEtcetera_Destroy,MoveFireArrowDown	2026-10-13 20:18:56	2026-10-13 20:41:20	2	1	229503	-
+Bg_Hidan_Curtain	cascade8-h/s/o	all	2026-10-14 09:41:44	2026-10-14 11:33:48	-	-	-	-
+En_Horse_Link_Child	cascade8-h/s/o	all	2026-10-14 09:41:44	2026-10-14 11:33:48	-	-	-	-
+En_Ms	cascade8-h/s/o	all	2026-10-14 09:41:44	2026-10-14 11:33:48	-	-	-	-
+Bg_Menkuri_Eye	cascade8-h/s/o	all	2026-10-14 09:41:44	2026-10-14 11:33:48	-	-	-	-
+En_Ma1	cascade8-h/s/o	all	2026-10-14 09:41:44	2026-10-14 11:33:48	-	-	-	-
+Bg_Vb_Sima	cascade8-h/s/o	all	2026-10-14 09:41:44	2026-10-14 11:33:48	-	-	-	-
+En_Nb	cascade8-h/s/o	all	2026-10-14 09:41:44	2026-10-14 11:33:48	-	-	-	-
+En_Heishi2	cascade8-h/s/o	all	2026-10-14 09:41:44	2026-10-14 11:33:48	-	-	-	-
+En_Hata	cascade8-h/s/o	all	2026-10-14 11:56:37	2026-10-14 13:34:58	-	-	-	-
+En_Ik	cascade8-h/s/o	all	2026-10-14 11:56:37	2026-10-14 13:34:58	-	-	-	-
+En_Fd_Fire	cascade8-h/s/o	all	2026-10-14 11:56:37	2026-10-14 13:34:58	-	-	-	-
+En_G_Switch	cascade8-h/s/o	all	2026-10-14 11:56:37	2026-10-14 13:34:58	-	-	-	-
+En_A_Obj	cascade8-h/s/o	all	2026-10-14 11:56:37	2026-10-14 13:34:58	-	-	-	-
+Oceff_Wipe3	cascade8-h/s/o	all	2026-10-14 11:56:37	2026-10-14 13:34:58	-	-	-	-
+En_Blkobj	cascade8-h/s/o	all	2026-10-14 11:56:37	2026-10-14 13:34:58	-	-	-	-
+Bg_Ydan_Hasi	cascade8-h/s/o	all	2026-10-14 11:56:37	2026-10-14 13:34:58	-	-	-	-
+Demo_Gt	cascade8-h/s/o	all	2026-10-14 13:53:06	2026-10-14 16:02:18	-	-	-	-
+En_Fr	cascade8-h/s/o	all	2026-10-14 13:53:06	2026-10-14 16:02:18	-	-	-	-
+Bg_Hidan_Dalm	cascade8-h/s/o	all	2026-10-14 13:53:06	2026-10-14 16:02:18	-	-	-	-
+Door_Warp1	cascade8-h/s/o	all	2026-10-14 13:53:06	2026-10-14 16:02:18	-	-	-	-
+En_Poh	cascade8-h/s/o	all	2026-10-14 13:53:06	2026-10-14 16:02:18	-	-	-	-
+En_Ru1	cascade8-h/s/o	all	2026-10-14 13:53:06	2026-10-14 16:02:18	-	-	-	-
+Bg_Ice_Shelter	cascade8-h/s/o	all	2026-10-14 13:53:06	2026-10-14 16:02:18	-	-	-	-
+En_Ma2	cascade8-h/s/o	all	2026-10-14 13:53:06	2026-10-14 16:02:18	-	-	-	-

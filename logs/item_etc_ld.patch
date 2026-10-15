@@ -1,0 +1,8 @@
+51309c51309,51313
+<     err.bss +0x02595C /* 0x005AE878 */
+---
+>     z_item_etcetera.bss +0x019BA0 /* 0x005A2ABC */
+>     {
+>         *z_item_etcetera.o(+BSS)
+>     }
+>     err.bss +0x00BDA4 /* 0x005AE878 */

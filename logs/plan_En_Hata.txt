@@ -1,0 +1,3 @@
+En_Hata (tree ws/En_Hata): 5 asm functions, 338 insns (5 actor dir, 0 action FUN_s outside)
+haiku1 (214 insns): EnHata_Destroy[15], EnHata_Draw[48], EnHata_OverrideLimbDraw[52], EnHata_Update[99]
+sonnet-direct (124 insns): EnHata_Init[124]

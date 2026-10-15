@@ -1,0 +1,3 @@
+En_Blkobj (tree ws/En_Blkobj): 8 asm functions, 364 insns (8 actor dir, 0 action FUN_s outside)
+haiku1 (209 insns): EnBlkobj_DoNothing[1], EnBlkobj_Update[2], EnBlkobj_Wait[17], EnBlkobj_Destroy[27], EnBlkobj_SpawnDarkLink[34], EnBlkobj_DarkLinkFight[50], EnBlkobj_Init[78]
+sonnet-direct (155 insns): EnBlkobj_Draw[155]

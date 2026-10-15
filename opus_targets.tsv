@@ -1,0 +1,56 @@
+Bg_Zg	3	BgZg_Init(248 vs 260B colHeader spill) | BgZg_Draw(2w literal fold) | caseD_0_001a6260(3w)
+Magic_Wind	3	MagicWind_Init(448 vs 464B) | MagicWind_Destroy(1w tail call inline) | FUN_0021e310(FadeOut sched)
+En_Kakasi2	3	EnKakasi2_Init(85w) | EnKakasi2_Update(224 vs 220B shared tail) | FUN_003e552c(1 try) | FUN_003e1884(108 vs 112B)
+Bg_Haka	2	BgHaka_Draw (4 bytes short, translate-vector regalloc; draft #if 0) | FUN_003de340 (BgHaka_Pull; prologue/player load/regalloc; draft #if 0)
+Bg_Jya_Kanaami	2	FUN_003bc4b8(4 words: r1/r0 const store order; draft #if 0 in actor cpp, asm stays in functions_3A0000s.cpp) | BgJyaKanaami_Draw(29 words: 10.0 literal reg s0/s2 + col scale order; draft #if 0)
+En_Zl2	2	EnZl2_Init(256 vs 264B regs) | EnZl2_Draw(188 vs 184B)
+En_Kakasi	2	EnKakasi_Update(loop unrolled 232 vs 208B) | FUN_001808cc(8 words)
+Bg_Spot18_Shutter	2	BgSpot18Shutter_Init(4 words, block order) | FUN_00199688(0x199700 tail block shared by other actors' tables) | FUN_001995ec(5 words sched)
+En_Yabusame_Mark	2	EnYabusameMark_Init(4B short) | EnYabusameMark_Update(23w) | FUN_0020761c(524 vs 544B, float zero literal)
+En_Si	2	EnSi_Init(inlined model loader, static guard) | FUN_003adc80(1w extra mov r2 #0) | FUN_003ad218(1w same)
+En_Kakasi3	2	EnKakasi3_Update(loop unrolled) | FUN_00180b78(4w) | FUN_0029964c(17w r0/r1) | FUN_003e56c0
+Bg_Mori_Hineri	2	BgMoriHineri_Init(12 words) | FUN_00154dac | FUN_00174e04(6w) | FUN_001280fc(5w) | FUN_0029d22c
+Obj_Warp2block	2	ObjWarp2block_Init(4 words literal reg swap) | ObjWarp2block_Destroy | ObjWarp2block_Draw(76 vs 80B) | FUN_0025ac68 | FUN_00184184 | FUN_00185468
+En_Rl	1	EnRl_Init(3 words vldr sched)
+Bg_Ingate	1	BgIngate_Init(272 vs 276B, zero in r6, colHeader stack slot shared w/ 6th arg)
+Bg_Mori_Bigst	1	FUN_001105e0(4 words store order; needs StalfosFight @0x0015E1DC symbol)
+Bg_Mori_Hashira4	1	BgMoriHashira4_Init(3 words Actor_Kill tail call)
+Bg_Hidan_Firewall	1	BgHidanFirewall_Update(476 vs 488B, tail call FUN_00373264 + separate epilogue)
+En_Stream	1	EnStream_SuckPlayer(~100/126 words fp scheduling)
+Bg_Ice_Shutter	1	BgIceShutter_Init(312 vs 372B, colHeader zero-init dropped)
+Door_Gerudo	1	DoorGerudo_Init(200 vs 220B, colHeader stack, adds/blne)
+Obj_Lift	1	FUN_003bb7bc(Fall 672B, loop reg alloc)
+Bg_Mori_Hashigo	1	BgMoriHashigo_Init(548 vs 572B regs)
+Bg_Mori_Kaitenkabe	1	FUN_003f61dc(Rotate 3w fabs compare reg)
+En_Weather_Tag	1	EnWeatherTag_Init(2w bic r0/r1)
+Obj_Blockstop	1	ObjBlockstop_Update(extra nop before bl Actor_Kill) | FUN_003aa608(BgCheck_EntityLineTest2 wrapper, arg regs)
+Bg_Hidan_Kousi	1	BgHidanKousi_Init(0x160 vs 0x16C) | FUN_00176fb8(34 words reg alloc)
+Bg_Spot11_Oasis	1	BgSpot11Oasis_Update | FUN_002ad270(Draw, 3 words; draft under #if 0)
+Bg_Mori_Rakkatenjo	1	BgMoriRakkatenjo_Update(0x18A folded, 4B short) | FUN_003bc350(Fall 8 words)
+Actor_1D9	1	Actor1D9_Init | Actor1D9_Update(248 vs 260B vpush d8-d9)
+Bg_Jya_Goroiwa	1	BgJyaGoroiwa_Update(15w rotation block) | FUN_003c1124(Move, 4B too large)
+En_Okarina_Tag	1	EnOkarinaTag_Init(lsl16/lsr26 folded) | FUN_00274900(7 words VFP regs) | FUN_00274acc(24B short, tail placement)
+En_Guest	1	EnGuest_Init(10 words play in r2) | EnGuest_Update(3 words literal sched) | FUN_002108ac(extra nop before bl)
+Bg_Mori_Elevator	1	FUN_003bf708(SetPosition, draft #if 0, 492B C vs 576B region) | FUN_0012adb4(MoveIntoGround) | FUN_0012b7e8(MoveAboveGround) | FUN_003f73b4(StopMovement)
+Demo_Ik	1	DemoIk_Init(504 vs 532B) | caseD_1_0020c5a4 | caseD_2_002aefac | caseD_2_001d21d4 | caseD_5_0028f058
+Bg_Toki_Swd	0	BgTokiSwd_Init
+Bg_Ice_Objects	0	FUN_00196f54(Slide: shared literal sWhite/sGray, needs same-TU statics)
+Bg_Gate_Shutter	0	FUN_003e858c
+Bg_Jya_Ironobj	0	FUN_003bf344(12B short, return block/tail calls)
+En_Ganon_Organ	0	EnGanonOrgan_Draw(stack frame, matrix consts)
+En_Wonder_Talk2	0	EnWonderTalk2_Init(81 lines)
+Bg_Gnd_Soulmeiro	0	FUN_003f84d4(static zeroVec .bss needs ld rule)
+Obj_Hsblock	0	ObjHsblock_Draw(matrix at sp+4 vs sp+0)
+Obj_Bombiwa	0	ObjBombiwa_Update(27/179w r4/r5 swap)
+Bg_Spot18_Basket	0	FUN_003c1398(Spinning 4/89w)
+Bg_Ddan_Kd	0	BgDdanKd_Init | FUN_003d7f64
+Bg_Haka_Sgami	0	interrupted by rate limit; 1 GLOBAL_ASM left | see notes
+En_Encount1	0	FUN_001cc77c(SpawnLeevers) | FUN_0019f354(SpawnTektites) | FUN_0021bd40(SpawnStalchild)
+En_Tg	0	EnTg_Update(30/58w) | EnTg_PostLimbDraw(13/18w size) | FUN_0018645c(jump table)
+Bg_Spot01_Idohashira	0	caseD_1_003a7ae4 | caseD_3_003a5da0 | caseD_2_003a5b20 | FUN_0039e58c
+Obj_Tsubo	0	ObjTsubo_Init | ObjTsubo_Destroy | ObjTsubo_Update | FUN_0011055c | FUN_003be8e4
+Demo_Go	0	DemoGo_Init | caseD_1_002a0db8 | caseD_2_0027d61c | caseD_5_003a34dc | caseD_6_003a0720(big)
+Bg_Spot15_Rrbox	0	BgSpot15Rrbox_Init | BgSpot15Rrbox_Destroy | FUN_003bc294 | FUN_00184ff8 | FUN_003bd528(rough draft)
+Demo_Ext	0	DemoExt_Destroy(3 trailing bx lr pad) | caseD_0_001f0880 | caseD_1_00245094 | caseD_2_001f0678 | caseD_1_002247f8
+Bg_Breakwall	0	BgBreakwall_Init | FUN_0015c004 | FUN_003f471c | FUN_002768c4 | LavaCover@0x001EA8C8 | SpawnFragments
+En_Kusa	0	EnKusa_Init | EnKusa_Destroy(1 word linker-inline) | FUN_00111140 | FUN_001f7510 | FUN_00110450 | FUN_003bde20 | FUN_003f7748 | FUN_003cbcf0 | FUN_003bc564(shared?) | FUN_003bb3c8

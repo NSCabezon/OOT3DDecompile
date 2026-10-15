@@ -1,0 +1,4 @@
+En_Fd_Fire (tree ws/En_Fd_Fire): 8 asm functions, 570 insns (4 actor dir, 4 action FUN_s outside)
+haiku1 (353 insns): EnFdFire_Destroy[9], FUN_003abdcc[12], FUN_003abfb8[34], EnFdFire_Update[53], EnFdFire_Init[64], FUN_003ace80[90], FUN_003ac4c4[91]
+sonnet-direct (217 insns): EnFdFire_Draw[217]
+outside actor dir: FUN_003abdcc@functions_3A0000s.cpp, FUN_003abfb8@functions_3A0000s.cpp, FUN_003ace80@functions_3A0000s.cpp, FUN_003ac4c4@functions_3A0000s.cpp

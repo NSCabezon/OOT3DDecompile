@@ -1,0 +1,3 @@
+Oceff_Wipe3 (tree ws/Oceff_Wipe3): 4 asm functions, 350 insns (4 actor dir, 0 action FUN_s outside)
+haiku1 (56 insns): OceffWipe3_Destroy[25], OceffWipe3_Update[31]
+sonnet-direct (294 insns): OceffWipe3_Init[124], OceffWipe3_Draw[170]

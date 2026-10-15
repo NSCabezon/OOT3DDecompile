@@ -1,0 +1,4 @@
+Bg_Hidan_Dalm (tree ws/Bg_Hidan_Dalm): 7 asm functions, 383 insns (6 actor dir, 1 action FUN_s outside)
+haiku1 (383 insns): BgHidanDalm_Update[15], BgHidanDalm_Destroy[17], EffectSsKiraKira_SpawnSmallYellow[23], BgHidanDalm_Init[63], BgHidanDalm_Wait[76], BgHidanDalm_Shrink[87], BgHidanDalm_Draw[102]
+sonnet-direct (0 insns): 
+outside actor dir: EffectSsKiraKira_SpawnSmallYellow@functions_380000s.cpp

@@ -1,0 +1,14 @@
+Door_Gerudo
+Bg_Ddan_Kd
+Bg_Spot18_Basket
+Bg_Mori_Hineri
+Bg_Mori_Hashira4
+Bg_Zg
+Demo_Ext
+Elf_Msg
+Bg_Bdan_Objects
+En_Horse
+En_Xc
+En_Nutsball
+En_M_Fire1
+Demo_Tre_Lgt

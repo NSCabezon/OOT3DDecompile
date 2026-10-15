@@ -1,0 +1,6 @@
+haiku_start 2026-10-13 11:23:03
+haiku_end 2026-10-13 11:36:27 matched=7/54 tokens=310099 dur_ms=791129
+sonnet_start 2026-10-13 11:36:27
+sonnet_end 2026-10-13 12:42:24 matched=26/47 tokens=820338
+opus_start 2026-10-13 12:42:24
+opus_end 2026-10-13 12:53:49 matched=1/16 tokens=182658

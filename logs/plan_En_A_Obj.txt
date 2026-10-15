@@ -1,0 +1,4 @@
+En_A_Obj (tree ws/En_A_Obj): 7 asm functions, 363 insns (4 actor dir, 3 action FUN_s outside)
+haiku1 (150 insns): FUN_003a5768[3], FUN_003e2548[10], EnAObj_Destroy[20], FUN_00393d44[34], EnAObj_Draw[35], EnAObj_Update[48]
+sonnet-direct (213 insns): EnAObj_Init[213]
+outside actor dir: FUN_003a5768@functions_3A0000s.cpp, FUN_003e2548@functions_3E0000s.cpp, FUN_00393d44@functions_380000s.cpp

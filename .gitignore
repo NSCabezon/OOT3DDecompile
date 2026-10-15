@@ -1,0 +1,31 @@
+# OS / editor
+.DS_Store
+.venv/
+.stop
+.cascade_tree.lock
+.tree.lock
+
+# zeldaret/oot3d checkout (own git repo, branch decomp-night) and ROM-derived data: never here
+oot3d/
+extract/
+analysis/
+pilot/
+En_Tk/
+En_Siofuki/
+ws/
+ws.noindex/
+*.bin
+*.o
+*.elf
+*.3ds
+*.cci
+
+# toolchain binaries (wibo, RVCT) and build output
+tools/
+build/
+*.log
+*.out
+*.start
+*.bak_cfg*
+ws
+ws_batch1.txt

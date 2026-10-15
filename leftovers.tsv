@@ -1,0 +1,446 @@
+actor	func	words	tag	date
+Bg_Ice_Objects	FUN_00196f54	?	Slide: shared literal sWhite/sGray, needs same-TU statics	2026-10-13
+Bg_Haka_Huta	FUN_003df814	?	OPUS-FAILED: ctor reg order	2026-10-13
+Bg_Haka_Huta	FUN_0012795c	?	OPUS-FAILED: const in s1 vs s0	2026-10-13
+En_Skjneedle	MERGE-FAILED	 1 data byte differs at 0x52EE38 in main (raw-addr ichain/cylinder data); ws kept; EnSkjneedle_Update(3 words)		2026-10-13
+Bg_Bowl_Wall	BgBowlWall_WaitTargetHit@0x3E699C(cfg-merged in Bg_Bom_Guard FUN_003e68c4)	?		2026-10-13
+Bg_Bowl_Wall	BgBowlWall_Explode@0x1070AC(raw DCB in FUN_00107054)	?		2026-10-13
+Bg_Bowl_Wall	Disappear/WaitReappear(not located)	?		2026-10-13
+En_Zl2	EnZl2_Init	?	256 vs 264B regs	2026-10-13
+En_Zl2	EnZl2_Draw	?	188 vs 184B	2026-10-13
+En_Ru2	EnRu2_Init	?	93/138w); 23 action/draw fns NOT ATTEMPTED (see notes	2026-10-13
+Bg_Haka_Zou	FUN_003e5ad8	?	WaitForHit 752B, not attempted	2026-10-13
+Demo_Tre_Lgt	DemoTreLgt_Init	?	244 vs 248B r8 live	2026-10-13
+Demo_Tre_Lgt	DemoTreLgt_Destroy	?	linker-inline empty stub: needs stub in other file	2026-10-13
+Demo_Tre_Lgt	DemoTreLgt_Update	?	tail call bx r2	2026-10-13
+Demo_Tre_Lgt	FUN_001d2700	?		2026-10-13
+Demo_Tre_Lgt	FUN_001d2588	?		2026-10-13
+En_Takara_Man	EnTakaraMan_Init	?	unverified	2026-10-13
+En_Takara_Man	EnTakaraMan_Update	?	10w	2026-10-13
+En_Takara_Man	EnTakaraMan_Draw	?	4w	2026-10-13
+En_Takara_Man	FUN_001810fc	?		2026-10-13
+En_Takara_Man	FUN_003e7af4	?		2026-10-13
+Bg_Haka_MeganeBG	BgHakaMeganeBG_Init	?	C ok but data layout shift	2026-10-13
+Bg_Haka_MeganeBG	BgHakaMeganeBG_Draw	?	3w CSE	2026-10-13
+Bg_Haka_MeganeBG	FUN_0019d0d4	?		2026-10-13
+Bg_Haka_MeganeBG	FUN_001779b0	?		2026-10-13
+Bg_Haka_MeganeBG	FUN_001e9a08	?		2026-10-13
+Bg_Haka_MeganeBG	FUN_002597d4	?	bx lr	2026-10-13
+Bg_Haka_MeganeBG	FUN_002597d8	?		2026-10-13
+Demo_Im	DemoIm_Init(draft incomplete); action/draw fns not attempted	?		2026-10-13
+En_Yukabyun	EnYukabyun_Update	?		2026-10-13
+En_Yukabyun	FUN_003e6880	?	3w	2026-10-13
+En_Yukabyun	FUN_003b9e3c	?		2026-10-13
+En_Yukabyun	FUN_00107054	?		2026-10-13
+Bg_Jya_Zurerukabe	BgJyaZurerukabe_Update(draft, knockback callee unknown); actions cfg-merged in FUN_003bf948	?		2026-10-13
+Bg_Gnd_Darkmeiro	BgGndDarkmeiro_Init	?	660 vs 744B	2026-10-13
+Bg_Gnd_Darkmeiro	FUN_001292d4	?		2026-10-13
+Bg_Gnd_Darkmeiro	FUN_0012aad0	?		2026-10-13
+Bg_Gnd_Darkmeiro	FUN_00382314	?		2026-10-13
+Bg_Gnd_Darkmeiro	FUN_00382360	?		2026-10-13
+Bg_Gnd_Darkmeiro	FUN_00382520	?		2026-10-13
+Bg_Spot03_Taki	BgSpot03Taki_Init	?	38/69w	2026-10-13
+Bg_Spot03_Taki	BgSpot03Taki_Draw	?		2026-10-13
+Bg_Spot03_Taki	FUN_00323f04	?		2026-10-13
+Bg_Spot03_Taki	FUN_003e7f18	?		2026-10-13
+Bg_Ydan_Maruta	BgYdanMaruta_Init	?	needs data symbols	2026-10-13
+Bg_Ydan_Maruta	FUN_001ca91c	?	not attempted	2026-10-13
+Bg_Relay_Objects	BgRelayObjects_Init	?	18/145w	2026-10-13
+Bg_Relay_Objects	BgRelayObjects_Draw	?	7/30w	2026-10-13
+Bg_Relay_Objects	FUN_003cacd0	?		2026-10-13
+Bg_Relay_Objects	FUN_00181f38	?		2026-10-13
+Bg_Relay_Objects	FUN_001596b8	?		2026-10-13
+Bg_Relay_Objects	FUN_00181c84	?		2026-10-13
+En_Dy_Extra	EnDyExtra_Update	?	3w r0/r4	2026-10-13
+En_Dy_Extra	EnDyExtra_Init	?	~50w	2026-10-13
+En_Dy_Extra	EnDyExtra_Draw	?	no draft	2026-10-13
+Bg_Dodoago	BgDodoago_Init	?	stack frame +4, literal reuse	2026-10-13
+Bg_Dodoago	BgDodoago_Update	?	69w	2026-10-13
+Bg_Dodoago	FUN_003f2fc4	?		2026-10-13
+Bg_Dodoago	FUN_003eead0	?		2026-10-13
+Bg_Dodoago	FUN_0010d81c	?		2026-10-13
+En_Zl3	EnZl3_Init	?	skeleton draft	2026-10-13
+En_Zl3	EnZl3_Update	?	table literal fold	2026-10-13
+En_Zl3	EnZl3_Draw	?		2026-10-13
+Bg_Hidan_Hrock	BgHidanHrock_Init	?	needs ColliderTris types + data symbols	2026-10-13
+Bg_Hidan_Hrock	FUN_003e7e50	?	bx lr	2026-10-13
+Bg_Hidan_Hrock	FUN_001c7cf8	?		2026-10-13
+En_Wonder_Item	EnWonderItem_Update	?	14/32w if-conversion	2026-10-13
+En_Wonder_Item	EnWonderItem_Init	?	not attempted	2026-10-13
+Shot_Sun	ShotSun_Init	?	temp regs	2026-10-13
+Shot_Sun	ShotSun_UpdateHyliaSun	?	not iterated	2026-10-13
+Shot_Sun	FUN_00142894	?	not attempted	2026-10-13
+Bg_Zg	BgZg_Init	?	OPUS: 4w ldrsh/and reg swap	2026-10-13
+Bg_Zg	caseD_0_001a6260	?	OPUS: 3w ldrh reg	2026-10-13
+En_Kakasi	FUN_003e48f8	?	talk action, not targeted	2026-10-13
+En_Kakasi2	EnKakasi2_Init	?	OPUS: 5/106w float/zar reg swap	2026-10-13
+Magic_Wind	MagicWind_Init	?	OPUS: 2/116w vmov order	2026-10-13
+Bg_Spot18_Shutter	FUN_00199688	?	tail block 0x199700 shared	2026-10-13
+En_Yabusame_Mark	FUN_0020761c	?	OPUS: 2/136w s0 vs s1/s2	2026-10-13
+En_Kakasi3	FUN_003e56c0	?	OPUS: 4B short, curFrame address 2-step add	2026-10-13
+En_Rl	action/draw fns cfg-merged in other functions (see CLAUDE.md)	?		2026-10-13
+Obj_Warp2block	FUN_0025ac68	?	OPUS: 4w play/player r7/r8	2026-10-13
+Obj_Warp2block	FUN_00184184	?		2026-10-13
+Obj_Warp2block	FUN_00185468	?		2026-10-13
+Bg_Mori_Hineri	FUN_0029d22c	?	876B draw	2026-10-13
+Door_Gerudo	FUN_003f3fa0	?	cfg	2026-10-13
+Obj_Lift	FUN_003bb7bc	?	OPUS: two self copies r4/r8, 151/168w	2026-10-13
+En_Weather_Tag	FUN_00275218	?		2026-10-13
+En_Weather_Tag	FUN_002890a8	?		2026-10-13
+En_Weather_Tag	FUN_0025a888	?		2026-10-13
+En_Weather_Tag	FUN_00206004	?	not targeted	2026-10-13
+Bg_Mori_Hashigo	BgMoriHashigo_Init	?	OPUS: 55/143w, ladder branch r8 zero	2026-10-13
+Bg_Mori_Hashigo	FUN_002ac4f8	?		2026-10-13
+Demo_Ik	DemoIk_Init	?	OPUS: prologue self copy timing	2026-10-13
+Demo_Ik	caseD_1_0020c5a4	?	nops	2026-10-13
+Demo_Ik	caseD_5_0028f058	?	nops	2026-10-13
+Demo_Ik	caseD_2_002aefac	?		2026-10-13
+Demo_Ik	caseD_2_001d21d4	?		2026-10-13
+Actor_1D9	FUN_003d0ed4	?		2026-10-13
+En_Okarina_Tag	volatile debt FUN_00288d0c	?		2026-10-13
+Bg_Jya_Ironobj	FUN_0025ae88	?	OPUS: regalloc	2026-10-13
+Bg_Jya_Ironobj	FUN_001eb8d4	?		2026-10-13
+En_Ganon_Organ	EnGanonOrgan_Draw	?	OPUS: 12/84w actor ptr copy	2026-10-13
+En_Wonder_Talk2	EnWonderTalk2_Init	?	OPUS: 15/116w rot.z loop div regs	2026-10-13
+Bg_Ddan_Kd	FUN_003d7f64	?	static guarded vectors need data symbols	2026-10-13
+En_Encount1	FUN_0021bd40	?	OPUS: 12/223w float const reg order	2026-10-13
+En_Tg	EnTg_Update	?	OPUS: 16/58w	2026-10-13
+Bg_Spot01_Idohashira	caseD_1_003a7ae4/caseD_3_003a5da0(OPUS	 24/33w)		2026-10-13
+Bg_Spot01_Idohashira	caseD_2_003a5b20	?		2026-10-13
+Bg_Spot01_Idohashira	FUN_0039e58c	?		2026-10-13
+Obj_Tsubo	FUN_003be8e4	?	OPUS: 62/177w	2026-10-13
+Bg_Haka_Sgami	FUN_00127c04	?	Spin 1272B, draft needs decls	2026-10-13
+Demo_Go	caseD_2_0027d61c	?	OPUS: 33/75w	2026-10-13
+Demo_Go	caseD_5_003a34dc	?	103/120w	2026-10-13
+Demo_Go	DemoGo_Update	?	cfg	2026-10-13
+En_Kusa	EnKusa_Init	?		2026-10-13
+En_Kusa	FUN_003bde20	?		2026-10-13
+En_Kusa	FUN_003bb3c8	?		2026-10-13
+En_Kusa	FUN_003cbcf0	?		2026-10-13
+En_Kusa	FUN_003f7748	?		2026-10-13
+En_Kusa	FUN_003bc564	?	shared	2026-10-13
+Bg_Spot15_Rrbox	BgSpot15Rrbox_Init	?	OPUS: 7w	2026-10-13
+Bg_Spot15_Rrbox	FUN_00184ff8	?	4/112w draft	2026-10-13
+Bg_Spot15_Rrbox	FUN_003bd528	?		2026-10-13
+Demo_Ext	caseD_0_001f0880	?	30/55w	2026-10-13
+Demo_Ext	caseD_1_00245094	?	54/107w	2026-10-13
+Demo_Ext	caseD_2_001f0678	?	OPUS: 10/130w	2026-10-13
+Demo_Ext	caseD_1_002247f8	?		2026-10-13
+Bg_Breakwall	FUN_0015c004	?	OPUS: 17/85w params reload	2026-10-13
+Bg_Breakwall	LavaCover	?	no tsv	2026-10-13
+Bg_Breakwall	SpawnFragments	?		2026-10-13
+Item_Inbox	FUN_003a0e88	?	shared static loader 0x5BE5B8/0x55A21C	2026-10-13
+En_Nwc	EnNwc_ChickFall	?	3/69 words: r1/r2 swap in int compare, ~60 variants	2026-10-13
+En_Ganon_Mant	EnGanonMant_Update	?	shared loader + __FILE__ in text	2026-10-13
+Demo_Du	DemoDu_Init	?	13/216 words, Opus draft #if 0; ~460 variants	2026-10-13
+En_Heishi4	FUN_0025a074	?	N64 func_80A56B40, not attempted	2026-10-13
+En_Heishi4	FUN_001748f4	?	N64 func_80A56874, not attempted	2026-10-13
+En_Lightbox	EnLightbox_Update	?	4B short: predicated ldrhne/tstne; same shape as FUN_0039db30, EnBombf_Update; ~80 variants	2026-10-13
+Eff_Dust	EffDust_Init	?	shared static loader + __FILE__ + jump table	2026-10-13
+Actor_1D7	Actor1D7_Update	?	33/161 words: float reassoc scale.x*(c[3]*325)	2026-10-13
+Actor_1D7	FUN_0037bb4c	?	local static guard 0x514334 in data dump	2026-10-13
+Bg_Haka_Water	BgHakaWater_Init	?	mixed GetCMAB shapes, 9w	2026-10-13
+Bg_Haka_Water	BgHakaWater_Draw	?	VFP callee-saved numbering, 109/162	2026-10-13
+Bg_Spot07_Taki	BgSpot07Taki_Init	?	mixed GetCMAB shapes, 61/130	2026-10-13
+En_Changer	EnChanger_Init	?	cfg-merged tails FUN_0020f064/FUN_0020f074 belong to Init: needs cfg MERGE	2026-10-13
+Bg_Spot16_Bombstone	BgSpot16Bombstone_Init	?	836B size ok, shouldLive/zero regs swapped	2026-10-13
+Bg_Spot16_Bombstone	FUN_003bcf7c	?	not attempted	2026-10-13
+En_Hs	EnHs_Init	?	23/77: ROM ldr;strne;bne;str actionFunc	2026-10-13
+Bg_Spot02_Objects	FUN_0023c210	?	38/180 VFP sched	2026-10-13
+Bg_Spot02_Objects	FUN_0021f548	?	matrix+color interp, not attempted	2026-10-13
+En_Viewer	EnViewer_Init	?	114/172: state/type callee-saved swap, +8B	2026-10-13
+En_Holl	EnHoll_Draw	?	768 vs 792	2026-10-13
+En_Holl	FUN_003f1d7c	?	10w	2026-10-13
+En_Holl	FUN_00275264	?	2w idx reg	2026-10-13
+En_Holl	FUN_001eaab0	?	11w	2026-10-13
+En_Holl	FUN_001eac68	?	~60w	2026-10-13
+En_Holl	FUN_0021df78	?	2w idx reg	2026-10-13
+Bg_Spot08_Bakudankabe	BgSpot08Bakudankabe_Update	?	10/183: 65/12 const reg = source order	2026-10-13
+En_Mu	EnMu_Update	?	13/57: struct copy temp r0 vs r1	2026-10-13
+En_Mm2	FUN_001571d8	?	3w yaw regs	2026-10-13
+En_Toryo	EnToryo_Init	?	data no symbols	2026-10-13
+En_Toryo	EnToryo_Destroy	?	dead struct copy	2026-10-13
+En_Toryo	EnToryo_Update	?	6/68	2026-10-13
+En_Toryo	FUN_00178af8	?	not attempted	2026-10-13
+Demo_Sa	DemoSa_Init	?	25/253 regalloc	2026-10-13
+Demo_Sa	caseD_1	?	5w	2026-10-13
+Demo_Sa	caseD_3	?	6w	2026-10-13
+Demo_Sa	caseD_5	?	7w	2026-10-13
+Demo_Sa	caseD_0/7/8/c/11(not attempted)	?		2026-10-13
+Demo_Sa	caseD_9	?	shared Demo_Du	2026-10-13
+En_Xc	caseD_2_002932ec	?		2026-10-13
+En_Xc	caseD_2f	?		2026-10-13
+En_Xc	caseD_a_0031c07c	?		2026-10-13
+En_Xc	caseD_11_003236d4	?		2026-10-13
+En_Xc	caseD_3c	?		2026-10-13
+En_Xc	caseD_12_0026bf1c	?		2026-10-13
+En_Xc	caseD_2b	?		2026-10-13
+En_Xc	caseD_4d	?		2026-10-13
+En_Xc	caseD_33	?		2026-10-13
+En_Xc	caseD_3d	?		2026-10-13
+En_Xc	caseD_1_0026bfc4	?		2026-10-13
+En_Xc	caseD_4c	?	cfg	2026-10-13
+En_Horse	EnHorse_PostLimbDraw	?		2026-10-13
+En_Horse	EnHorse_InitHorsebackArchery	?		2026-10-13
+En_Horse	EnHorse_CutsceneUpdate	?		2026-10-13
+En_Horse	EnHorse_Draw	?		2026-10-13
+En_Horse	FUN_0037308c	?		2026-10-13
+En_Horse	EnHorse_UpdateHorsebackArchery	?		2026-10-13
+En_Horse	EnHorse_MountedTrot	?		2026-10-13
+En_Horse	EnHorse_MountedGallop	?		2026-10-13
+En_Horse	EnHorse_Reverse	?		2026-10-13
+En_Horse	EnHorse_MountedWalk	?		2026-10-13
+En_Horse	EnHorse_UpdateSpeed	?		2026-10-13
+En_Horse	EnHorse_UpdateBgCheckInfo	?		2026-10-13
+En_Horse	EnHorse_Init	?		2026-10-13
+En_Horse	EnHorse_OverrideLimbDraw	?		2026-10-13
+En_Horse	EnHorse_Update	?		2026-10-13
+En_Horse	FUN_00408828	?	cfg	2026-10-13
+En_Horse	EnHorse_FleePlayer	?	cfg	2026-10-13
+En_GeldB	EnGeldB_PostLimbDraw	?	static	2026-10-13
+End_Title	FUN_00250540	?	static	2026-10-13
+Bg_Bdan_Objects	FUN_001c832c	?	cfg	2026-10-13
+Bg_Hidan_Hamstep	BgHidanHamstep_Init	230	far	2026-10-13
+End_Title	FUN_002504ac	12	far	2026-10-13
+End_Title	EndTitle_Draw	96	far	2026-10-13
+En_Attack_Niw	FUN_00363604	?	far vfp const regs	2026-10-13
+En_Attack_Niw	FUN_00205a40	?	far	2026-10-13
+En_GeldB	EnGeldB_Advance	4	near	2026-10-13
+En_GeldB	EnGeldB_SpinAttack	8	far	2026-10-13
+En_GeldB	EnGeldB_Block	10	far	2026-10-13
+En_GeldB	EnGeldB_Slash	10	far	2026-10-13
+En_GeldB	EnGeldB_ReactToPlayer	29	far	2026-10-13
+En_GeldB	EnGeldB_Update	100	far	2026-10-13
+En_GeldB	EnGeldB_Init	?	big	2026-10-13
+En_GeldB	EnGeldB_Draw	?	big	2026-10-13
+Bg_Mizu_Water	BgMizuWater_Draw	2	near SetUnkAC y/z order	2026-10-13
+En_Ma3	EnMa3_Init	98	far	2026-10-13
+En_Ma3	EnMa3_Update	?	far (not attempted)	2026-10-13
+En_Ma3	EnMa3_Draw	?	far (not attempted)	2026-10-13
+En_Ma3	FUN_003C6240	?	far (not attempted)	2026-10-13
+En_Ma3	FUN_001960E8	?	far (not attempted)	2026-10-13
+En_Anubice_Fire	EnAnubiceFire_Draw	?	far not attempted	2026-10-13
+En_Anubice_Fire	FUN_00108774	?	far not attempted	2026-10-13
+En_Anubice_Fire	FUN_00178728	?	far not attempted	2026-10-13
+Item_Etcetera	ItemEtcetera_Init	?	far not attempted	2026-10-13
+Item_Etcetera	ItemEtcetera_UpdateFireArrow	?	far not attempted	2026-10-13
+Item_Etcetera	FUN_00129f2c	?	far not attempted	2026-10-13
+Item_Etcetera	FUN_003f529c	?	far not attempted	2026-10-13
+En_fHG	FUN_00362ab4	3	near timer vdiv reg s1/s0	2026-10-13
+En_fHG	EnfHG_Draw	46	far fog color clamp float regs	2026-10-13
+En_fHG	FUN_00126438	?	big	2026-10-13
+En_fHG	FUN_00126f50	?	big	2026-10-13
+En_fHG	FUN_0013ec58	?	big	2026-10-13
+En_fHG	FUN_0017a63c	?	big	2026-10-13
+En_Dnt_Nomal	EnDntNomal_Update	?	big	2026-10-13
+En_Dnt_Nomal	FUN_00177dd0	?	big	2026-10-13
+En_Dnt_Nomal	FUN_00174efc	?	big	2026-10-13
+En_Dnt_Nomal	FUN_001990c8	?	big	2026-10-13
+En_Js	EnJs_Update	?	big	2026-10-13
+Bg_Spot11_Bakudankabe	BgSpot11Bakudankabe_Update	?	big	2026-10-13
+En_Niw_Lady	FUN_00154904	?	big	2026-10-13
+En_Niw_Lady	FUN_001792f4	?	big	2026-10-13
+En_Niw_Lady	EnNiwLady_Update	?	big	2026-10-13
+Bg_Toki_Hikari	BgTokiHikari_Draw	157	far inline MTX34 int-reg stores + SetUnkAC r5 (Siofuki class)	2026-10-13
+En_Anubice_Fire	FUN_003e04b8	12	far zero-init Vector3f VFP reg/store order (velocity/sp84/sp78)	2026-10-13
+Bg_Menkuri_Eye	BgMenkuriEye_Draw	199	far structural inline MTX34 TRS + SetUnkAC r5 (Siofuki class)	2026-10-14
+En_Horse_Link_Child	FUN_00348854	?	far shared speed helper (many actors)	2026-10-14
+En_Ma1	FUN_00195b90	4	near literal-pool order + cross-jump; draft uses hand-hoisted gSaveContext base ptrs	2026-10-14
+En_Heishi2	EnHeishi2_Init	?	static guarded local static identity MTX34 (guard 0x55A210 obj 0x5BE29C) needs ld pin + data split	2026-10-14
+En_Nb	FUN_00318010	105	far r6 self copy + float regs	2026-10-14
+En_Nb	caseD_1c_002a439c	188	far 920 vs 928B	2026-10-14
+En_Nb	FUN_0031cfb8	27	near callee-saved numbering only	2026-10-14
+En_Nb	caseD_14_00293124	29	far case-16 copy + reg numbering	2026-10-14
+Oceff_Wipe3	OceffWipe3_Draw	170	far structural SetUnkAC/inline MTX34	2026-10-14
+En_Blkobj	EnBlkobj_Draw	155	far structural SetUnkAC/inline MTX34	2026-10-14
+En_Fd_Fire	EnFdFire_Draw	217	far structural SetUnkAC/inline MTX34	2026-10-14
+En_Hata	EnHata_Draw	33	far ROM re-copies scale into s2 per column-0 product (~60 variants)	2026-10-14
+En_G_Switch	i vs ROM cmp i	?		2026-10-14
+En_G_Switch	n	?		2026-10-14
+En_G_Switch	FUN_0033ba54	86	far inlined effect-spawn matrix via ptr vs sp	2026-10-14
+En_G_Switch	FUN_001e5048	240	far structural inline TRS matrix	2026-10-14
+En_Ik	FUN_001008b4	300	far UpdateEnemy entry reg hoisting (2020 vs 2024B)	2026-10-14
+Door_Warp1	DoorWarp1_Init	28	far per-arm skelCurve temps hoisted above branch	2026-10-14
+Door_Warp1	DoorWarp1_Destroy	11	far env-clear loop counter r1 vs r0 (~1100 variants)	2026-10-14
+Door_Warp1	DoorWarp1_Draw	?	far structural inlined gfx body	2026-10-14
+Door_Warp1	FUN_0015b904	?	cfg undecoded jump-table cases	2026-10-14
+Bg_Ice_Shelter	FUN_001cf550	29	far needs signs/positions real statics (data split to 0x5120F0 incl Init guard)	2026-10-14
+Bg_Ice_Shelter	BgIceShelter_Init	132	static guarded local static + 2 actor copies	2026-10-14
+En_Poh	FUN_00256980	79	far per-element vmov scale copy (En_Hata Draw class)	2026-10-14
+En_Poh	EnPoh_Update	121	far needs 7-arg FUN_00372f38	2026-10-14
+En_Poh	FUN_001dd6c0	?	far not attempted	2026-10-14
+En_Poh	EnPoh_Init	?	far not attempted	2026-10-14
+En_Poh	FUN_00297e98	?	far not attempted	2026-10-14
+En_Poh	FUN_001dd974	?	far not attempted	2026-10-14
+En_Poh	FUN_003d64a4	?	static two __cxa_guard	2026-10-14
+Demo_Gt	caseD_3_002aecd8	8	near self/play swap at entry	2026-10-14
+Demo_Gt	caseD_4_002aeda4	12	near play/cue reg numbering	2026-10-14
+Demo_Gt	caseD_5_002aeea8	12	near play/cue reg numbering	2026-10-14
+Demo_Gt	caseD_8_0027d884	11	near ldrsh pSpeed reload	2026-10-14
+Demo_Gt	FUN_00330768	66	far ldrd pos/arg5/life regs	2026-10-14
+Demo_Gt	caseD_e_0027da2c	85	far entry &unk_1CA/1CC regs	2026-10-14
+Demo_Gt	caseD_4_0037d110	?	far fabs RotateAxis helper should unlock	2026-10-14
+Demo_Gt	caseD_5_0037d360	?	far fabs RotateAxis helper should unlock	2026-10-14
+Demo_Gt	FUN_0032a6f4	97	far self/pos swap + literal reload	2026-10-14
+Demo_Gt	FUN_0032a998	?	far uninit Vec3s packing	2026-10-14
+Demo_Gt	FUN_00329d0c	?	static guarded static	2026-10-14
+Demo_Gt	FUN_003291f4	?	far not attempted	2026-10-14
+En_Fr	FUN_0034251c	?	static guarded static	2026-10-14
+En_Fr	FUN_001b09ac	?	far not attempted (Draw inline matrix)	2026-10-14
+En_Fr	EnFr_Update	?	far not attempted	2026-10-14
+En_Fr	FUN_001c23a4	?	far not attempted	2026-10-14
+En_Fr	FUN_001b0ea0	?	far not attempted	2026-10-14
+En_Ru1	EnRu1_Init	?	far	2026-10-14
+En_Ru1	FUN_00295138	?	far	2026-10-14
+En_Ru1	FUN_002a5e68	?	far	2026-10-14
+En_Ru1	FUN_00319b54	?	far	2026-10-14
+En_Ru1	FUN_0031a014	?	far	2026-10-14
+En_Ru1	FUN_003264c8	?	far	2026-10-14
+En_Ru1	FUN_00387850	?	far	2026-10-14
+En_Ru1	FUN_00387a00	?	far	2026-10-14
+En_Ru1	FUN_00387e08	?	far	2026-10-14
+En_Ru1	FUN_00391cbc	?	far	2026-10-14
+En_Ru1	FUN_00391d48	?	far	2026-10-14
+En_Ru1	FUN_003920ac	?	far	2026-10-14
+En_Ru1	FUN_00392200	?	far	2026-10-14
+En_Ru1	FUN_003922d0	?	far	2026-10-14
+En_Ru1	FUN_00392430	?	far	2026-10-14
+En_Ru1	FUN_00394288	?	far	2026-10-14
+En_Ru1	FUN_0039ad64	?	far	2026-10-14
+En_Ru1	FUN_0039af68	?	far	2026-10-14
+En_Ru1	FUN_0039b244	?	far	2026-10-14
+En_Ru1	FUN_0039b404	?	far	2026-10-14
+En_Ru1	FUN_0039d404	?	far	2026-10-14
+En_Ru1	FUN_003a28f8	?	far	2026-10-14
+En_Ru1	FUN_003a2a2c	?	far	2026-10-14
+En_Ru1	FUN_003a2dfc	?	far	2026-10-14
+En_Ru1	FUN_003a3be0	?	far	2026-10-14
+En_Ru1	FUN_003a3d88	?	far	2026-10-14
+En_Ru1	FUN_003a3fe0	?	far	2026-10-14
+En_Ru1	FUN_003a5418	?	far	2026-10-14
+En_Ru1	FUN_003a5604	?	far	2026-10-14
+En_Ru1	FUN_003a68b8	?	far	2026-10-14
+En_Ru1	FUN_003a6c54	?	far	2026-10-14
+En_Ru1	FUN_003a90f0	?	far	2026-10-14
+En_Ru1	caseD_1_00294fb4	?	far	2026-10-14
+En_Ru1	caseD_2_00283a94	?	far	2026-10-14
+Bg_Zg	FallAway	?	cfg unlabeled code inside another fn (no asm symbol)	2026-10-14
+En_Xc	sub_0032cd64	?	cfg unlabeled	2026-10-14
+En_Xc	sub_0037ea2c	?	cfg unlabeled	2026-10-14
+En_Xc	sub_003a28f0	?	cfg unlabeled	2026-10-14
+En_Xc	sub_003a28f4	?	cfg unlabeled	2026-10-14
+En_Xc	sub_003a3bdc	?	cfg unlabeled	2026-10-14
+En_Xc	sub_003871a4	?	cfg unlabeled	2026-10-14
+En_Xc	sub_0037e9a4	?	cfg unlabeled	2026-10-14
+En_Xc	sub_0037e95c	?	cfg unlabeled	2026-10-14
+En_Xc	sub_0039d074	?	cfg unlabeled	2026-10-14
+En_Xc	sub_00391440	?	cfg unlabeled	2026-10-14
+En_Xc	sub_00391558	?	cfg unlabeled	2026-10-14
+En_Xc	sub_00319560	?	cfg unlabeled	2026-10-14
+En_Xc	sub_00326524	?	cfg unlabeled	2026-10-14
+En_Xc	sub_002a4a44	?	cfg unlabeled	2026-10-14
+En_Xc	sub_002a4b88	?	cfg unlabeled	2026-10-14
+Bg_Spot17_Funen	FUN_002ad4d4	75	far draw not attempted	2026-10-14
+Demo_Gt	caseD_f_0027dbb0	8	near pDir/kREG r2r3 + ldrsh pSpeed + play/gGameInfo r5r6	2026-10-14
+En_Nb	caseD_15_002a4170	15	near ptr regs swapped (split done)	2026-10-14
+En_Nb	caseD_1_0024cdf4	5	near cue r1/r0 (split done)	2026-10-14
+En_Nb	caseD_7_002b1a90	13	near unpredicated mov r1 #0 before cue test (split done)	2026-10-14
+En_Nb	EnNb_Init	?	far not cfg (pool mid-function); 960B	2026-10-14
+Demo_Tre_Lgt	DemoTreLgt_Draw	?	far split done; no draft	2026-10-14
+Bg_Zg	FUN_00188cc8	28	far FallAway tail	2026-10-14
+En_Xc	caseD_15_0037e9a8	33	far split done; no draft	2026-10-14
+En_Xc	caseD_16_003870dc	50	far split done; no draft	2026-10-14
+En_Xc	caseD_17_003a3b0c	52	far split done; no draft	2026-10-14
+En_Xc	caseD_28	64	far split done; no draft	2026-10-14
+En_Xc	caseD_2e	37	far split done; no draft	2026-10-14
+En_Xc	caseD_32	60	far split done; no draft	2026-10-14
+En_Xc	caseD_4a	67	far split done; no draft	2026-10-14
+Oceff_Wipe	OceffWipe_Draw	145	far int-reg matrix stores	2026-10-14
+Oceff_Wipe2	OceffWipe2_Draw	170	far int-reg matrix stores	2026-10-14
+Oceff_Wipe4	OceffWipe4_Draw	185	far int-reg matrix stores	2026-10-14
+Bg_Po_Syokudai	BgPoSyokudai_Draw	35	far callee-saved numbering	2026-10-14
+Obj_Hamishi	ObjHamishi_Update	249	far thisx/self separate regs + pool consts	2026-10-14
+En_In	EnIn_Update	23	far Stagger/Fidget reg numbering	2026-10-14
+En_In	FUN_003b8bd4	103	far animationType==0xF block if-converted	2026-10-14
+Bg_Ice_Turara	BgIceTurara_Shiver	18	far s17/s18 order	2026-10-14
+Bg_Haka_Trap	BgHakaTrap_Update	15	far play in r1 for actionFunc	2026-10-14
+Bg_Haka_Trap	FUN_001cb334	25	far Quake consts in callee-saved	2026-10-14
+Bg_Haka_Trap	FUN_001e8684	25	far Quake block	2026-10-14
+En_Ani	EnAni_Destroy	11	cfg falls into FUN_00189844 needs join	2026-10-14
+Door_Ana	DoorAna_Draw	38	far int-reg matrix stores	2026-10-14
+Door_Ana	DoorAna_Init	100	far predicated switch stores	2026-10-14
+En_Tk	EnTk_Draw	78	far self/base reg swap	2026-10-14
+En_Mk	EnMk_Wait	27	far predicated shared tail	2026-10-14
+En_Anubice	EnAnubice_Update	35	far hoisted consts + bic reg	2026-10-14
+En_Zl1	FUN_003ad010	28	far reg numbering	2026-10-14
+En_Zl1	FUN_001610c4	41	far	2026-10-14
+En_Zl1	FUN_003ac060	55	far	2026-10-14
+En_Zl1	FUN_003f7848	146	big DCB jump table	2026-10-14
+En_Zl1	FUN_003ad41c	266	big DCB jump table	2026-10-14
+Item_Ocarina	ItemOcarina_Destroy	0	cfg split of FUN_00253a4c breaks link L6221E	2026-10-14
+En_Dodojr	EnDodojr_OverrideLimbDraw	54	far vmov scale copies	2026-10-14
+En_Dekunuts	FUN_003d89c8	0	static guarded Vec3f 0x59908C	2026-10-14
+En_Weiyer	FUN_00121024	38	far	2026-10-14
+En_Niw_Girl	EnNiwGirl_Init	172	static guarded identity MTX34 0x55A210	2026-10-14
+Bg_Hidan_Rock	FUN_003d0830	116	far int-reg matrix stores	2026-10-14
+Bg_Mizu_Movebg	BgMizuMovebg_Draw	60	matrix int-store MTX34 (FUN_003713fc inlined)	2026-10-14
+Bg_Hidan_Kowarerukabe	BgHidanKowarerukabe_Init	20	far table base r0/r1; likely needs real statics pinned in ld	2026-10-14
+Bg_Jya_Bigmirror	BgJyaBigmirror_Init	71	far __FILE__ in .text	2026-10-14
+Bg_Haka_Gate	BgHakaGate_Draw	58	far flame 9-elem scale vmov copies + pool order	2026-10-14
+Bg_Haka_Gate	FUN_00181e38	6	near playerDirection s1 vs s2 (hundreds of variants)	2026-10-14
+Bg_Haka_Gate	FUN_0019ae14	13	far armcc folds 110/40 compares	2026-10-14
+En_Gs	EnGs_Draw	148	far SetUnkAC mov r6	2026-10-14
+En_Gs	#1 hoisted above flags&1 branch	?		2026-10-14
+En_Part	EnPart_Update	324	matrix int-store scale MTX34 + far	2026-10-14
+En_Part	FUN_00281edc	135	far literal pool flushed one block later	2026-10-14
+En_Vm	EnVm_Draw	0	static needs PostLimbDraw 8 guards in same .data (0x52FF60..7C) in C too	2026-10-14
+En_Vm	FUN_0016f3d0	107	far hoisted mov sb	2026-10-14
+En_Vm	#0 + MakeTrans + 8 guarded statics	?		2026-10-14
+En_Vm	EnVm_Init	10	near pointer-copy store + if-converted scene check	2026-10-14
+En_Vm	EnVm_Update	28	far inlined CheckHealth/SetupStun/SetupDie	2026-10-14
+En_Light	EnLight_Update	13	near radius/scale schedule timer reg	2026-10-14
+En_Brob	EnBrob_Draw	24	near pool+reg order 1.0 in s0 before pause cmp	2026-10-14
+En_Goroiwa	FUN_00316c64	10	near hoisted 3.0f/0.5f + table base reg	2026-10-14
+En_Goroiwa	FUN_00317708	73	far ldrsh params + late &0xFF	2026-10-14
+En_Goroiwa	FUN_0021ee20	90	far waypoint float reg order	2026-10-14
+En_Goroiwa	FUN_001eb56c	210	static guarded Vec3f guard 0x525F9C obj 0x59AF90	2026-10-14
+En_Md	FUN_00370d60	35	far hoisted const regs r1/r3 swapped + block layout	2026-10-14
+Bg_Bdan_Switch	BgBdanSwitch_Init	27	far play2 CSE (134 w at entry copy)	2026-10-14
+Bg_Hidan_Rsekizou	BgHidanRsekizou_Draw	92	static identity-MTX34 VFP numbering	2026-10-14
+Bg_Hidan_Sima	BgHidanSima_Draw	248	static identity MTX34 via guarded static + matrix loop	2026-10-14
+Arms_Hook	ArmsHook_Update	13	static two guarded Vector3f + VFP numbering	2026-10-14
+En_Skb	EnSkb_Update	200	far reg numbering only (fp sfx const, play r7/r8)	2026-10-15
+En_Reeba	EnReeba_Update	35	far play/FUN_00299348 literal r7-r8 swap	2026-10-15
+En_Reeba	FUN_0011ff28	5	near unk_498/499 via self+0x400 base r5	2026-10-15
+En_GirlA	EnGirlA_Draw	69	far VFP numbering + pool order + hoisted mov r6	2026-10-15
+En_GirlA	#1	?		2026-10-15
+En_GirlA	EnGirlA_InitializeItemAction	181	big	2026-10-15
+En_Ta	EnTa_Init	91	far literal pool dumped mid-function (layout)	2026-10-15
+En_Fu	EnFu_Update	4	near strb off incoming r0 (35 variants)	2026-10-15
+Bg_Spot06_Objects	BgSpot06Objects_Init	306	far	2026-10-15
+En_River_Sound	FUN_00404b20	3	near	2026-10-15
+En_River_Sound	FUN_002549b4	9	near	2026-10-15
+En_River_Sound	FUN_00323378	far ROM keeps 0 in r7 / 3 in r8 + VFP reversed		2026-10-15
+En_Fhg_Fire	EnFhgFire_Draw	13	near	2026-10-15
+En_Fhg_Fire	FUN_0019fe84	186	big	2026-10-15
+En_Dns	FUN_0027f3f8	10	static DAT_00520234 derived from DAT_00520238	2026-10-15
+En_Dns	EnDns_ChangeAnim	28	static guard relative to sAnimPtrs (all TU statics in C)	2026-10-15
+Bg_Mizu_Bwall	BgMizuBwall_Init	?	todo not attempted (stopped for reboot)	2026-10-15
+En_Bx	EnBx_Init	?	todo not attempted (stopped for reboot)	2026-10-15
+En_Bx	EnBx_Update	?	todo	2026-10-15
+En_Bx	EnBx_Draw	?	todo	2026-10-15
+En_Eiyer	EnEiyer_Draw	58	far	2026-10-15
+En_Eiyer	FUN_003de594	1	near	2026-10-15
+Bg_Hidan_Fwbig	BgHidanFwbig_Init	?	todo not attempted (stopped for reboot)	2026-10-15
+Bg_Hidan_Fwbig	BgHidanFwbig_Update	?	todo	2026-10-15
+En_Ba	EnBa_Init	32	far const 1/4 regs + %3 schedule	2026-10-15
+En_Ba	FUN_00232dac	54	far i r6 / mtx r7	2026-10-15
+En_Ba	EnBa_Update	145	far play2 copies folded	2026-10-15
+En_Ba	FUN_00198c20	230	matrix	2026-10-15
+En_Ba	FUN_003c6320	381	matrix	2026-10-15
+En_Ba	FUN_00108948	385	matrix	2026-10-15
+Obj_Ice_Poly	ObjIcePoly_Draw	16	far mov r5	2026-10-15
+Obj_Ice_Poly	#1 before sinf + row load order	?		2026-10-15
+Obj_Ice_Poly	ObjIcePoly_Melt	22	far 0.5f load order + VFP; lead: real statics sColorWhite/Gray at data start	2026-10-15
+Obj_Ice_Poly	ObjIcePoly_Idle	144	static guard 0x535188 obj 0x5a2ea4 + raw Player offsets	2026-10-15
+En_Mm	EnMm_Init	4	near static identity-matrix VFP numbering (1500 variants); guard hand-written on EQUs until Init is C	2026-10-15

@@ -1,0 +1,32 @@
+Bg_Ice_Objects	FUN_00196f54	?	Slide: shared literal sWhite/sGray, needs same-TU statics
+Bg_Gnd_Soulmeiro	FUN_003f84d4	?	static zeroVec .bss needs ld rule
+Bg_Ddan_Kd	FUN_003d7f64	?	static guarded vectors need data symbols
+Item_Inbox	FUN_003a0e88	?	shared static loader 0x5BE5B8/0x55A21C
+En_Ganon_Mant	EnGanonMant_Destroy	?	shared static loader
+Eff_Dust	EffDust_Init	?	shared static loader + __FILE__ + jump table
+Eff_Dust	EffDust_Destroy	?	shared static loader
+Actor_1D7	FUN_0037bb4c	?	local static guard 0x514334 in data dump
+En_Hs2	EnHs2_PostLimbDraw	?	local static guard 0x5273DC/obj 0x59AFFC: use loader method - plain inline accessor + pin + data chunk split
+En_Hs	EnHs_PostLimbDraw	?	guarded local static
+En_Mm2	EnMm2_PostLimbDraw	?	guarded local static
+En_Toryo	EnToryo_PostLimbDraw	?	guarded static
+En_GeldB	EnGeldB_PostLimbDraw	?	static
+Bg_Jya_Haheniron	BgJyaHaheniron_PillarCrumble	?	static
+Bg_Jya_Haheniron	BgJyaHaheniron_RubbleCollide	?	static
+Elf_Msg	ElfMsg_Draw	?	static
+End_Title	FUN_00250540	?	static
+En_fHG	EnfHG_Init	?	static guarded loader 0x55A21C
+En_Js	EnJs_PostLimbDraw	?	static guarded local Vec3f guard 0x528988
+En_Heishi2	EnHeishi2_Init	?	static guarded local static identity MTX34 (guard 0x55A210 obj 0x5BE29C) needs ld pin + data split
+En_Ik	FUN_0016ee30	?	static four guarded function-local statics
+Bg_Hidan_Dalm	BgHidanDalm_Shrink	0	static C matches; guard _ZGVaccel @0x5116B8 in data dump + accel @0x5699C8 bss need ld pin + data split
+Bg_Ice_Shelter	BgIceShelter_Init	132	static guarded local static + 2 actor copies
+En_Poh	FUN_003d64a4	?	static two __cxa_guard
+Demo_Gt	FUN_00329d0c	?	static guarded static
+En_Fr	FUN_0034251c	?	static guarded static
+Bg_Ice_Turara	BgIceTurara_Break	60	static guarded local accel
+Bg_Haka_Trap	FUN_001ca65c	0	static guarded zeroVec
+En_Ani	EnAni_PostLimbDraw	29	static guarded sMultVec
+En_Mk	EnMk_PostLimbDraw	0	static guarded Vector3f 0x59B44C draft matches
+En_Dekunuts	FUN_003d89c8	0	static guarded Vec3f 0x59908C
+En_Niw_Girl	EnNiwGirl_Init	172	static guarded identity MTX34 0x55A210

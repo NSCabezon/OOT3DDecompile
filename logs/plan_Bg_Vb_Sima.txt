@@ -1,0 +1,3 @@
+Bg_Vb_Sima (tree ws/Bg_Vb_Sima): 5 asm functions, 333 insns (5 actor dir, 0 action FUN_s outside)
+haiku1 (83 insns): BgVbSima_Destroy[12], BgVbSima_Draw[17], FUN_003a3200[21], BgVbSima_Init[33]
+sonnet-direct (250 insns): BgVbSima_Update[250]

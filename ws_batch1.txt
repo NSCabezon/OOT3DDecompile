@@ -1,0 +1,10 @@
+En_Horse_Ganon
+En_Horse_Zelda
+En_Sda
+En_Bom_Bowl_Pit
+Obj_Mure3
+En_Anubice_Tag
+En_Gm
+En_Tana
+En_Okarina_Effect
+Actor_1DA
