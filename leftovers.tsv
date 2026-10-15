@@ -489,3 +489,11 @@ Arrow_Light	ArrowLight_Draw	0	big	2026-10-15
 En_Cow	EnCow_Init	0	far	2026-10-15
 En_Cow	EnCow_Update	0	far	2026-10-15
 En_Cow	FUN_0033ddbc	6	far	2026-10-15
+En_Hy	EnHy_PostLimbDraw	15	near	2026-10-15
+En_Hy	EnHy_Draw	5	near	2026-10-15
+En_Hy	EnHy_Update	99	big	2026-10-15
+En_Hy	FUN_0017079c	185	big	2026-10-15
+Obj_Bean	FUN_0015e154	6	near	2026-10-15
+Obj_Bean	ObjBean_Update	2	near	2026-10-15
+Obj_Bean	ObjBean_Init	84	big	2026-10-15
+Obj_Bean	ObjBean_Draw	123	big	2026-10-15

@@ -442,3 +442,6 @@ En_Bom_Chu
 En_Door
 Arrow_Light
 En_Cow
+En_Hy
+En_Syateki_Man
+Obj_Bean

@@ -1,6 +1,3 @@
-Obj_Bean
-En_Hy
-En_Syateki_Man
 En_Bombf
 Magic_Fire
 Obj_Kibako

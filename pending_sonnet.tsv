@@ -207,3 +207,5 @@ En_Bom_Chu	EnBomChu_Init:30:far,FUN_003e4ea4:75:far,EnBomChu_Draw:41:far,EnBomCh
 En_Door	EnDoor_Destroy:10:near,EnDoor_Draw:40:far,EnDoor_Open:40:far,EnDoor_Init:80:far,EnDoor_Idle:0:notattempted,EnDoor_SetupType:0:notattempted	2026-10-15
 Arrow_Light	ArrowLight_Draw:0:big	2026-10-15
 En_Cow	EnCow_Init:0:far,EnCow_Update:0:far,FUN_0033ddbc:6:far,FUN_00314cfc:3:near,FUN_003f0504:7:near,FUN_00349008:31:far,FUN_003f1244:52:big,FUN_0014ff48:37:static,FUN_0016d584:0:notattempted	2026-10-15
+En_Hy	EnHy_PostLimbDraw:15:near,EnHy_Draw:5:near,EnHy_Update:99:big,FUN_0017079c:185:big	2026-10-15
+Obj_Bean	FUN_0015e154:6:near,ObjBean_Update:2:near,ObjBean_Init:84:big,ObjBean_Draw:123:big	2026-10-15
