@@ -1,7 +1,3 @@
-En_Sa
-Oceff_Storm
-En_Ge3
-Obj_Oshihiki
 Oceff_Spot
 En_Fire_Rock
 En_Tubo_Trap

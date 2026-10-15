@@ -1,0 +1,25 @@
+Working dir: /Users/nscabezon/Apps/OOT3DDecompile/decomp-spike. Matching decomp of OoT3D (RVCT 4.0 b839 under wibo).
+Read FIRST: AGENT_BRIEF.md (Tools/Rules), /Users/nscabezon/Apps/OOT3DDecompile/.claude/skills/oot3d-cascade/references/cheatsheet.md, and the idiom list in CLAUDE.md (`sed -n '/Learned about 3DS/,$p' CLAUDE.md`). Apply known idioms BEFORE inventing variants. Python: `.venv/bin/python -P` (scripts) / `python3 -P`.
+
+GROUP G32 = actors: En_Ge3 Obj_Oshihiki. Each actor has its OWN workspace ws/<A> (already created). Work actor by actor; never mix files between workspaces. Never write under oot3d/.
+STAGE: Haiku first pass: small functions only
+FUNCTIONS (actor: function[file if outside actor dir]):
+- En_Ge3: EnGe3_OverrideLimbDraw(8 insns), EnGe3_Destroy(15 insns), EnGe3_PostLimbDraw(16 insns), EnGe3_WaitTillCardGiven(18 insns), EnGe3_GiveCard(27 insns), EnGe3_Draw(33 insns), EnGe3_Update(52 insns), EnGe3_WaitLookAtPlayer(61 insns), EnGe3_Wait(62 insns), EnGe3_UpdateWhenNotTalking(75 insns), EnGe3_Init(84 insns), EnGe3_ForceTalk(89 insns)
+- Obj_Oshihiki: FUN_0034aae0(4 insns), ObjOshihiki_Destroy(12 insns), ObjOshihiki_Update(28 insns)
+
+Rules:
+- Attempt EVERY listed function before finishing; do not stop early. Iterate with `scripts/fastchk.py <A> <cpp> FUNC` (~1 s per variant).
+- Attempt budget (cost control): if a function is still > 10 words off after ~15 variants, leave it (GLOBAL_ASM + draft under `#if 0` + one-line diff note in ws/<A>/STATUS.md) and move on. Near-misses (≤ 10 words) get up to ~30 variants; prefer SINGLE-SITE mutations (dead `Self* s2` alias on one access, `thisx->` vs `self->actor.` on one access, block-scoped `PlayState* play2 = play;` around one call, declaration-vs-assignment order of f32 consts) and, for stubborn ones, a small brute-force generator script in ws/<A>/tmp that runs fastchk over mutation combos.
+- If ROM code for a function has extra code after its literal pool (cfg tail: `scripts/detect_cfg.py --func <F>` lists hints), do NOT try to match the whole range: split it in the ws with `python3 -P scripts/cfg_split.py ws/<A> <HEAD> <0xADDR> FUN_<addr> --dry-run` then without --dry-run (NO --tsv, NO --cfg), ws_check baseline, then match the head. Report each split.
+- ALWAYS move matched FUN_s from src/functions/functions_*.cpp into the actor .cpp keeping their EXACT name (even if other files call them — declare them extern there is not needed, the linker resolves by name). NEVER leave C code in src/functions/functions_*.cpp: the merge only removes GLOBAL_ASM lines from those files, C left there is lost and the link breaks.
+- Prototypes: `FUN_00372f38`/`FUN_00350f34`/`FUN_003508b8` are variadic in include/functions.hpp (`(actor, play, &m0, i0, ..., 0)` / `(actor, &m0, ..., 0)`), `FUN_00370734`/`FUN_003731e0` return s32, `FUN_00370084` = Math_ApproachS: call them directly — NEVER add local prototypes, `__asm("FUN_...")` aliases or function-pointer casts for them (they break the main-tree build at merge). Non-actor symbol aliases (`_ZTI*`, ctors, globals) go in `src/game/shared_syms.s`, not in the actor dir.
+- Edit sources with the Edit tool on exact snippets (no python/sed rewriting of .cpp files). No #pragma, no fake matches. Scratch only in ws/<A>/tmp (delete at end).
+- Don't edit queue.txt / night_state.tsv / leftovers.tsv / CLAUDE.md / analysis/. No commit, no push.
+- Finish: `scripts/ws_check.sh <A>` for EVERY actor of the group at baseline (only FUN_00249af8, 0 non-function bytes).
+
+Final reply (short), per actor, exactly:
+`ACTOR <A>`
+`SPLIT: <HEAD> <0xADDR> <NEW>` (one line per split applied, in order; omit if none)
+`MATCHED: <list or none>`
+`UNMATCHED: <Func:words:tag, ...>` (tag: near ≤10 words, far, big, cfg, static, ...; or none)
+`NOT_ATTEMPTED: <list or none>`

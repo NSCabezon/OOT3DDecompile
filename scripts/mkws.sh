@@ -19,6 +19,9 @@ for f in $D/oot3d/disassembly/data/*.s; do b=$(basename $f); [ -L $W/disassembly
 rmdir $D/.tree.lock; trap - EXIT
 cd $W
 export ARMCC_PATH=$D/tools/rvct839 RVCT40INC=$D/../821/include RVCT40LIB=$D/../821/lib WIBO=$D/tools/wibo/wibo-macos
+# opt-in armcc object cache (scripts/armcc_cache.sh, hooked in armwrap): disable with `ARMCC_CACHE_DIR= scripts/mkws.sh <name>`
+: "${ARMCC_CACHE_DIR=$D/.armcc_cache}"; export ARMCC_CACHE_DIR
+if [ -n "$ARMCC_CACHE_DIR" ]; then mkdir -p "$ARMCC_CACHE_DIR"; ARMCC_CACHE_STAMP=$($D/scripts/armcc_cache.sh --stamp $W); export ARMCC_CACHE_STAMP; fi
 cmake -B build -S . > build-configure.log 2>&1
 cmake --build build -t code -j4 > build.log 2>&1
 echo "workspace ready: $W"

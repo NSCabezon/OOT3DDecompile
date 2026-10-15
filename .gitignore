@@ -29,3 +29,6 @@ build/
 *.bak_cfg*
 ws
 ws_batch1.txt
+
+# armcc object cache (scripts/armcc_cache.sh)
+.armcc_cache/
